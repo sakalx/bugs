@@ -13,7 +13,7 @@ const production = 'build';
 const SRC_DIR = path.join(__dirname, development);
 const DIST_DIR = path.join(__dirname, production);
 
-module.exports = (env, argv) => {
+module.exports = (env, argv = {}) => {
   const isProd = argv.mode === 'production';
 
 //============================================================
