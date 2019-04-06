@@ -18,7 +18,6 @@ function Cube() {
   };
 
   const handleStopMoving = () => {
-
     if (isMoving) {
       console.log('stopMoving');
       isMoving = false;
@@ -26,14 +25,6 @@ function Cube() {
       x.prevPosition = x.current;
       y.prevPosition = y.current;
     }
-  };
-
-  const handleTouchStart = e => {
-    const touch = e.changedTouches[0];
-    // x.startPosition = touch.clientX;
-    // y.startPosition = touch.clientY;
-    // viewport.addEventListener('touchend', handleStopMoving);
-    //viewport.addEventListener('touchmove', handleMove.bind(null, touch));
   };
 
   const handleStartMoving = e => {
@@ -65,7 +56,6 @@ function Cube() {
           onTouchEnd={handleStopMoving}
       >
         <Boiler/>
-
       </Viewport>
   );
 }
