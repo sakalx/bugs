@@ -37,11 +37,18 @@ function Cube() {
   const handleMove = e => {
     if (isMoving) {
       console.log('handleMove');
-      x.current = (e.clientX - x.startPosition) + x.prevPosition;
-      y.current = (e.clientY - y.startPosition) + y.prevPosition;
+      const nextX = (e.clientX - x.startPosition) + x.prevPosition;
+      const nextY = (e.clientY - y.startPosition) + y.prevPosition;
+      const isXChanged = nextX > x.current + 20 || nextX < x.current - 20;
+      const isYChanged = nextY > y.current + 20 || nextY < y.current - 20;
 
-      bodyStyle.setProperty('--x', x.current + 'deg');
-      bodyStyle.setProperty('--y', y.current + 'deg');
+      if (isXChanged || isYChanged) {
+        x.current = nextX;
+        y.current = nextY;
+        bodyStyle.setProperty('--x', nextX + 'deg');
+        bodyStyle.setProperty('--y', nextY + 'deg');
+        console.error(4444);
+      }
     }
   };
 

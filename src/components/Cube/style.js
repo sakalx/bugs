@@ -14,4 +14,5 @@ export const Boiler = styled('div')`
   height: 35vh;
   transform: rotateX(var(--x, 0)) rotateY(var(--y, 0));
   width: 35vh;
+  transition: transform .7s ease-out;
 `;
