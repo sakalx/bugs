@@ -1,11 +1,20 @@
 import React from 'react';
 
-import {Viewport, Boiler} from './style';
+import {
+  BoilerBack,
+  BoilerBottom,
+  BoilerFront,
+  BoilerLeft,
+  BoilerRight,
+  Boiler,
+  BoilerTop,
+  Viewport,
+} from './style';
 
 function Cube() {
   const bodyStyle = document.body.style;
 
-  let isMoving = false;
+  let upperSideDown = false;
   const x = {
     current: 0,
     prevPosition: 0,
@@ -17,10 +26,16 @@ function Cube() {
     startPosition: 0,
   };
 
+  const rotate = (x, y) => {
+    bodyStyle.setProperty('--x', x + 'deg');
+    bodyStyle.setProperty('--y', y + 'deg');
+  };
+
   const handleStopMoving = () => {
-    if (isMoving) {
+    if (x.startPosition) {
       console.log('stopMoving');
-      isMoving = false;
+      const normalizeY = Math.abs(y.current % 360);
+      upperSideDown = normalizeY >= 90 && normalizeY <= 270;
       x.startPosition = y.startPosition = 0;
       x.prevPosition = x.current;
       y.prevPosition = y.current;
@@ -29,25 +44,27 @@ function Cube() {
 
   const handleStartMoving = e => {
     console.log('handleStartMoving');
-    isMoving = true;
     x.startPosition = e.clientX;
     y.startPosition = e.clientY;
   };
 
   const handleMove = e => {
-    if (isMoving) {
+    if (x.startPosition) {
       console.log('handleMove');
-      const nextX = (e.clientX - x.startPosition) + x.prevPosition;
-      const nextY = (e.clientY - y.startPosition) + y.prevPosition;
+      const distanceX = e.clientX - x.startPosition;
+
+      const nextX = upperSideDown
+          ? x.prevPosition - distanceX
+          : x.prevPosition + distanceX;
+      const nextY = y.prevPosition - (e.clientY - y.startPosition);
+
       const isXChanged = nextX > x.current + 20 || nextX < x.current - 20;
       const isYChanged = nextY > y.current + 20 || nextY < y.current - 20;
 
       if (isXChanged || isYChanged) {
         x.current = nextX;
         y.current = nextY;
-        bodyStyle.setProperty('--x', nextX + 'deg');
-        bodyStyle.setProperty('--y', nextY + 'deg');
-        console.error(4444);
+        rotate(nextX, nextY);
       }
     }
   };
@@ -57,12 +74,20 @@ function Cube() {
           onMouseDown={handleStartMoving}
           onMouseMove={handleMove}
           onMouseUp={handleStopMoving}
-          onMouseLeave={handleStopMoving}
+          // onMouseLeave={handleStopMoving}
+          onMouseOut={handleStopMoving}
           onTouchStart={e => handleStartMoving(e.changedTouches[0])}
           onTouchMove={e => handleMove(e.changedTouches[0])}
           onTouchEnd={handleStopMoving}
       >
-        <Boiler/>
+        <Boiler>
+          <BoilerFront>Front</BoilerFront>
+          <BoilerBack>Back</BoilerBack>
+          <BoilerRight>Right</BoilerRight>
+          <BoilerLeft>Left</BoilerLeft>
+          <BoilerTop>TOP</BoilerTop>
+          <BoilerBottom>Bottom</BoilerBottom>
+        </Boiler>
       </Viewport>
   );
 }
