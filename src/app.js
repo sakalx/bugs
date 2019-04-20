@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import Cube from './components/Cube';
+import Cube from 'root/components/Cube';
 function App() {
 
 

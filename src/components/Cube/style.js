@@ -1,7 +1,5 @@
 import styled, {css} from 'styled-components';
 
-import Paper from '@material-ui/core/Paper';
-
 import About from 'root/svg/AboutIcon';
 import Accomplishments from 'root/svg/AccomplishmentsIcon';
 import Contact from 'root/svg/ContactIcon';
@@ -10,16 +8,8 @@ import Experience from 'root/svg/ExperienceIcon';
 import Skills from 'root/svg/SkillsIcon';
 
 const _iconStyle = css`
-  font-size: 65px;
-`;
-
-export const CubeSide = styled(Paper)`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: center;
-  user-select: none;
+  font-size: 65px !important;
+  pointer-events: none;
 `;
 
 export const AboutIcon = styled(About)`
