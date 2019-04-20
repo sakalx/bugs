@@ -1,10 +1,18 @@
 import React from 'react';
 
+import {connect} from 'react-redux';
+import {showPage} from 'root/redux-core/actions/page';
+
 import {Wrap, Title} from './style';
 
 let isClick = false;
 
-function CubeSide({index, label, children}) {
+function CubeSide({
+                    index,
+                    label,
+                    children,
+                    showPage,
+                  }) {
 
   const handleMouseDown = () => {
     setTimeout(() => isClick = false, 100);
@@ -12,14 +20,17 @@ function CubeSide({index, label, children}) {
   };
 
   const handleMouseUp = ({target}) => {
-    if (isClick) {
-      console.dir(target.attributes[2].value);
-    }
+    if (!isClick) return;
+
+    const tabIndex = target.attributes[1].value;
+    showPage(tabIndex);
     isClick = false;
   };
 
   return (
       <Wrap
+          /*Keep tab-index as first attribute, for correct handle click*/
+          tab-index={index}
           aria-label={`${label}-info`}
           component='section'
           elevation={12}
@@ -27,9 +38,8 @@ function CubeSide({index, label, children}) {
           onMouseUp={handleMouseUp}
           onTouchStart={e => handleMouseDown(e.changedTouches[0])}
           square
-          tab-index={index}
       >
-        <Title variant='h5' gutterBottom>
+        <Title variant='h6' gutterBottom>
           {label}
         </Title>
         {children}
@@ -37,5 +47,12 @@ function CubeSide({index, label, children}) {
   );
 }
 
-export default CubeSide;
+const mapStateToProps = ({page}) => ({
+  page,
+});
 
+const mapDispatchToProps = {
+  showPage,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(CubeSide);
