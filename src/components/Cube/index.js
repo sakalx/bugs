@@ -1,18 +1,20 @@
 import React from 'react';
 
+import Typography from '@material-ui/core/Typography';
+
 import Cube from 'react-cube3d-component';
 
-import AboutIcon from 'root/svg/AboutIcon';
-import AccomplishmentsIcon from 'root/svg/AccomplishmentsIcon';
-import ContactIcon from 'root/svg/ContactIcon';
-import EducationIcon from 'root/svg/EducationIcon';
-import ExperienceIcon from 'root/svg/ExperienceIcon';
-import SkillsIcon from 'root/svg/SkillsIcon';
-
-import {CubeSide} from './style';
+import {
+  CubeSide,
+  AboutIcon,
+  AccomplishmentsIcon,
+  EducationIcon,
+  ContactIcon,
+  SkillsIcon,
+  ExperienceIcon,
+} from './style';
 
 function CubeComponent() {
-
 
   const handleClick = ({target}) => {
   };
@@ -25,32 +27,44 @@ function CubeComponent() {
       >
         {/*Front*/}
         <CubeSide elevation={12}>
-          About
+          <Typography variant='h5' gutterBottom>
+            About
+          </Typography>
           <AboutIcon style={{fontSize: '65px'}}/>
         </CubeSide>
         {/*Back*/}
         <CubeSide elevation={12}>
-          Contact
+          <Typography variant='h5' gutterBottom>
+            Contact
+          </Typography>
           <ContactIcon style={{fontSize: '65px'}}/>
         </CubeSide>
-         {/*Right*/}
+        {/*Right*/}
         <CubeSide elevation={12}>
-          Education
+          <Typography variant='h5' gutterBottom>
+            Education
+          </Typography>
           <EducationIcon style={{fontSize: '65px'}}/>
         </CubeSide>
-         {/*Left*/}
+        {/*Left*/}
         <CubeSide elevation={12}>
-          Experience
+          <Typography variant='h5' gutterBottom>
+            Experience
+          </Typography>
           <ExperienceIcon style={{fontSize: '65px'}}/>
         </CubeSide>
-         {/*Top*/}
+        {/*Top*/}
         <CubeSide elevation={12}>
-          Skills
+          <Typography variant='h5' gutterBottom>
+            Skills
+          </Typography>
           <SkillsIcon style={{fontSize: '65px'}}/>
         </CubeSide>
-         {/*Bottom*/}
+        {/*Bottom*/}
         <CubeSide elevation={12}>
-          Accomplishments
+          <Typography variant='h5' gutterBottom>
+            Accomplishments
+          </Typography>
           <AccomplishmentsIcon style={{fontSize: '65px'}}/>
         </CubeSide>
       </Cube>
