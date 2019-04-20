@@ -101,6 +101,11 @@ module.exports = (env, argv = {}) => {
           include: SRC_DIR,
           use: htmlConfig,
         },
+        // CSS - loader
+        {
+          test: /\.css$/,
+          use: ['style-loader', 'css-loader'],
+        },
         // JS babel - loader
         {
           test: /\.(js|jsx)$/,
