@@ -1,7 +1,8 @@
 import React from 'react';
 
-
 import Cube from 'root/components/Cube';
+import AboutPage from 'root/pages/About';
+
 function App() {
 
 
@@ -12,10 +13,12 @@ function App() {
         height: '100vh',
         width: '100vw',
         justifyContent: 'center',
+        position: 'relative',
       }}
       >
         <Cube/>
 
+        <AboutPage/>
       </main>
   );
 }

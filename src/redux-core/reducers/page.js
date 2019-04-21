@@ -6,18 +6,18 @@ const {
 } = page;
 
 const initState = {
-  activePage: null,
+  active: null,
 };
 
 export default function(state = initState, {type, payload}) {
   switch (type) {
     case HIDE_PAGE:
       return ({
-        activePage: null,
+        active: null,
       });
     case SHOW_PAGE:
       return ({
-        activePage: payload,
+        active: payload,
       });
   }
 

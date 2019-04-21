@@ -4,7 +4,7 @@ import {createLogger} from 'redux-logger';
 import rootReducer from './reducers';
 
 const logger = createLogger({
-  collapsed: true,
+  collapsed: false,
 });
 
 const middleware = applyMiddleware(logger);

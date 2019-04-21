@@ -1,10 +1,36 @@
 import React from 'react';
 
+import {connect} from 'react-redux';
+import {hidePage} from 'root/redux-core/actions/page';
 
-function AboutPage() {
+import Zoom from 'root/components/animation/Zoom';
+
+import {WrapContent} from './style';
+
+
+// Front Cube
+function AboutPage({page, hidePage}) {
+
+  const handleClick = () => {
+    hidePage();
+  };
+
   return (
-      <h1>AboutPage</h1>
+      <Zoom zoomIn={page.active === 'front'}>
+        <WrapContent>
+          <h5 onClick={handleClick}>BACK</h5>
+          <h1>About Page</h1>
+        </WrapContent>
+      </Zoom>
   );
 }
 
-export default AboutPage;
+const mapStateToProps = ({page}) => ({
+  page,
+});
+
+const mapDispatchToProps = {
+  hidePage,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(AboutPage);

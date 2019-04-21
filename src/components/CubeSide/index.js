@@ -21,16 +21,14 @@ function CubeSide({
 
   const handleMouseUp = ({target}) => {
     if (!isClick) return;
+    const sideIndex = target.attributes['side-index'].value;
 
-    const tabIndex = target.attributes[1].value;
-    showPage(tabIndex);
+    showPage(sideIndex);
     isClick = false;
   };
 
   return (
       <Wrap
-          /*Keep tab-index as first attribute, for correct handle click*/
-          tab-index={index}
           aria-label={`${label}-info`}
           component='section'
           elevation={12}
@@ -38,6 +36,7 @@ function CubeSide({
           onMouseUp={handleMouseUp}
           onTouchStart={e => handleMouseDown(e.changedTouches[0])}
           square
+          side-index={index}
       >
         <Title variant='h6' gutterBottom>
           {label}
@@ -47,12 +46,8 @@ function CubeSide({
   );
 }
 
-const mapStateToProps = ({page}) => ({
-  page,
-});
-
 const mapDispatchToProps = {
   showPage,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CubeSide);
+export default connect(null, mapDispatchToProps)(CubeSide);
