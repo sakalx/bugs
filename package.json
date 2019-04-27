@@ -55,6 +55,7 @@
     "@material-ui/core": "^3.9.2",
     "@material-ui/icons": "^3.0.2",
     "overlay-reveal-effect": "^1.0.1",
+    "particles.js": "^2.0.0",
     "react": "^16.8.4",
     "react-cube3d-component": "^1.0.8",
     "react-dom": "^16.8.4",

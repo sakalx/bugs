@@ -48,7 +48,7 @@ function CubeComponent({page}) {
   return (
       <Cube
           cubeSize='50vmin'
-          viewportSize='90vmin'
+          viewportSize='75vmin'
           reveal={!!page.active}
       >
         {data.map(({index, label, Icon}) =>

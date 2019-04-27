@@ -1,3 +1,8 @@
+import 'particles.js';
+particlesJS.load('particles', './assets/particles.json', () => {
+  console.log('Particles config loaded.');
+});
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
