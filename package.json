@@ -54,8 +54,9 @@
   "dependencies": {
     "@material-ui/core": "^3.9.2",
     "@material-ui/icons": "^3.0.2",
+    "overlay-reveal-effect": "^1.0.1",
     "react": "^16.8.4",
-    "react-cube3d-component": "^1.0.6",
+    "react-cube3d-component": "^1.0.8",
     "react-dom": "^16.8.4",
     "react-redux": "^6.0.1",
     "react-router-dom": "^5.0.0",

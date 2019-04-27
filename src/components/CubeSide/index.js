@@ -8,12 +8,12 @@ import {Wrap, Title} from './style';
 let isClick = false;
 
 function CubeSide({
+                    children,
                     index,
                     label,
-                    children,
+                    page,
                     showPage,
                   }) {
-
   const handleMouseDown = () => {
     setTimeout(() => isClick = false, 100);
     isClick = true;
@@ -23,7 +23,10 @@ function CubeSide({
     if (!isClick) return;
     const sideIndex = target.attributes['side-index'].value;
 
-    showPage(sideIndex);
+    (page.active)
+        ? showPage(null)
+        : showPage(sideIndex);
+
     isClick = false;
   };
 
@@ -46,8 +49,12 @@ function CubeSide({
   );
 }
 
+const mapStateToProps = ({page}) => ({
+  page,
+});
+
 const mapDispatchToProps = {
   showPage,
 };
 
-export default connect(null, mapDispatchToProps)(CubeSide);
+export default connect(mapStateToProps, mapDispatchToProps)(CubeSide);

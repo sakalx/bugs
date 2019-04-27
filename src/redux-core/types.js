@@ -4,6 +4,5 @@ export const snackbar = {
 };
 
 export const page = {
-  HIDE_PAGE: 'HIDE_PAGE',
   SHOW_PAGE: 'SHOW_PAGE',
 };

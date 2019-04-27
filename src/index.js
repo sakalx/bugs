@@ -8,7 +8,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import {MuiThemeProvider} from '@material-ui/core/styles';
 import muiTheme from './theme';
 
-import App from './app';
+import App from './App/';
 
 ReactDOM.render(
     <React.Fragment>

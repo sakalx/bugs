@@ -1,15 +1,17 @@
 import React from 'react';
 
-import Cube from 'react-cube3d-component';
+import {connect} from 'react-redux';
 
 import CubeSide from 'root/components/CubeSide';
 import {
+  Cube,
   AboutIcon,
   AccomplishmentsIcon,
-  EducationIcon,
+  CloseIcon,
   ContactIcon,
-  SkillsIcon,
+  EducationIcon,
   ExperienceIcon,
+  SkillsIcon,
 } from './style';
 
 const data = [
@@ -40,20 +42,27 @@ const data = [
   },
 ];
 
-function CubeComponent() {
+
+function CubeComponent({page}) {
+
   return (
       <Cube
           cubeSize='50vmin'
           viewportSize='90vmin'
-          style={{cursor: 'grab'}}
+          reveal={!!page.active}
       >
         {data.map(({index, label, Icon}) =>
             <CubeSide key={index} label={label} index={index}>
-              {Icon}
+              {page.active ?  <CloseIcon/> : Icon}
             </CubeSide>,
         )}
       </Cube>
+
   );
 }
 
-export default CubeComponent;
+const mapStateToProps = ({page}) => ({
+  page,
+});
+
+export default connect(mapStateToProps, null)(CubeComponent);
