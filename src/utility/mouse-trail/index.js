@@ -1,13 +1,11 @@
 import TweenMax from 'gsap/TweenMax';
 
-
-
 export default function(viewportEl, canvasEl) {
   // Configuration.
   const dots = 20; // How many dots to have.
   const speed = 5; // How fast to spin.
   const fade = .1; // How much to fade. 1 all, 0.5 half, 0 none.
-  const distance = 100; // Distance from the mouse.
+  const distance = 80; // Distance from the mouse.
   const color = '#fff'; // Color of dots.
 
   const ctx = canvasEl.getContext('2d');
@@ -21,10 +19,8 @@ export default function(viewportEl, canvasEl) {
   position.y = canvasEl.height / 2;
 
   viewportEl.addEventListener('mousemove', function(e) {
-    console.log('mousemove');
     TweenMax.to(position, 0.3, {x: e.clientX, y: e.clientY, ease: 'linear'});
   });
-
 
   for (let i = 0; i < dots; i++) {
     points.push({
@@ -83,5 +79,5 @@ export default function(viewportEl, canvasEl) {
   (function mouseTrailLoop() {
     requestAnimFrame(mouseTrailLoop);
     render();
-  })()
+  })();
 }

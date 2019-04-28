@@ -7,7 +7,7 @@ import {Wrap, Title} from './style';
 
 let isClick = false;
 
-function CubeSide({
+function Side({
                     children,
                     index,
                     label,
@@ -57,4 +57,4 @@ const mapDispatchToProps = {
   showPage,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CubeSide);
+export default connect(mapStateToProps, mapDispatchToProps)(Side);

@@ -2,7 +2,7 @@ import React from 'react';
 
 import {connect} from 'react-redux';
 
-import CubeSide from 'root/components/CubeSide';
+import Side from './Side';
 import {
   Cube,
   AboutIcon,
@@ -52,9 +52,9 @@ function CubeComponent({page}) {
           reveal={!!page.active}
       >
         {data.map(({index, label, Icon}) =>
-            <CubeSide key={index} label={label} index={index}>
+            <Side key={index} label={label} index={index}>
               {page.active ?  <CloseIcon/> : Icon}
-            </CubeSide>,
+            </Side>,
         )}
       </Cube>
 
