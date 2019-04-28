@@ -30,7 +30,7 @@ export const Cube = styled(Cube3D)`
   z-index: 3000;
   
   ${props => props.reveal && css`
-    animation: ${moveCube} 1s forwards;;
+    animation: ${moveCube} 1s both;;
   `};
 `;
 

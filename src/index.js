@@ -1,7 +1,9 @@
 import 'particles.js';
-particlesJS.load('particles', './assets/particles.json', () => {
+particlesJS.load('particles', './assets/particles/particles.json', () => {
   console.log('Particles config loaded.');
 });
+
+import 'root/utility/mouse-trail'
 
 import React from 'react';
 import ReactDOM from 'react-dom';

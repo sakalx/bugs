@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useLayoutEffect, useRef} from 'react';
 
 import {connect} from 'react-redux';
 
 import OverlayEffect from 'overlay-reveal-effect';
+import mouseTrail from 'root/utility/mouse-trail';
+
 import Cube from 'root/components/Cube';
 import AboutPage from 'root/pages/About';
 import AccomplishmentsPage from 'root/pages/Accomplishments';
@@ -14,6 +16,16 @@ import SkillsPage from 'root/pages/Skills';
 import {Wrap} from './style';
 
 const App = React.memo(function App({page}) {
+  const canvasEl = useRef(null);
+
+  useLayoutEffect(() => {
+    const viewport = document.getElementById('overlay-viewport');
+    const canvas = canvasEl.current;
+
+    mouseTrail(viewport, canvas);
+
+  }, []);
+
   const renderContent = () => {
     const pages = {
       'front': <AboutPage/>,
@@ -26,11 +38,22 @@ const App = React.memo(function App({page}) {
     return pages[page.active] || null;
   };
 
+
+  // TODO render OverlayEffect after this App was rendered
   return (
       <Wrap>
         <Cube/>
-        <OverlayEffect isOpen={!!page.active} direction={'bottom-right'}>
+
+
+        <OverlayEffect
+            style={{height: '100%', overflow: 'hidden'}}
+            id='overlay-viewport'
+            isOpen={!!page.active}
+            direction={'bottom-right'}
+        >
           {renderContent()}
+          <canvas ref={canvasEl} style={{opacity: .1}}/>
+
         </OverlayEffect>
       </Wrap>
   );

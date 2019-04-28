@@ -7,6 +7,8 @@ export const WrapContent = styled('div')`
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 100%;
   justify-content: center;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
 `;

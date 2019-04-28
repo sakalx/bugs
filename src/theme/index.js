@@ -8,11 +8,11 @@ export default createMuiTheme({
   typography: {
     useNextVariants: true,
   },
-  overrides: {
+/*  overrides: {
     MuiTooltip: {
       tooltip: {
         fontSize: '.8rem',
       },
     },
-  },
+  },*/
 });
