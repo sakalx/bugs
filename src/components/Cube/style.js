@@ -18,8 +18,8 @@ const moveCube = keyframes`
   } 
   50% {transform: scale(0);} 
   100% {
-    left: -25vmin;
-    top: -25vmin;
+    left: -21vmin;
+    top: -21vmin;
     transform: scale(.3);
   }
 `;

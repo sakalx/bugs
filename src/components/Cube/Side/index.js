@@ -15,8 +15,8 @@ function Side({
                     showPage,
                   }) {
   const handleMouseDown = () => {
-    setTimeout(() => isClick = false, 100);
     isClick = true;
+    setTimeout(() => isClick = false, 120);
   };
 
   const handleMouseUp = ({target}) => {

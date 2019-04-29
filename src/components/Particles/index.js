@@ -14,7 +14,7 @@ const Particles = React.memo(function Particles() {
       <div
           id='particles-effect'
           style={{
-            height: '100wh',
+            height: '100vh',
             position: 'absolute',
             width: '100vw',
             zIndex: 1,
