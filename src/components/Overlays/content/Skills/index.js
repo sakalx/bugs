@@ -1,11 +1,11 @@
 import React from 'react';
 
-function AboutPage() {
+function SkillsPage() {
   return (
       <section>
-        <h1>About Page</h1>
+        <h1>Skills Page</h1>
       </section>
   );
 }
 
-export default AboutPage;
+export default SkillsPage;

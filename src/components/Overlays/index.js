@@ -1,26 +1,17 @@
-import React, {useLayoutEffect, useRef, lazy} from 'react';
+import React, {useLayoutEffect, useRef} from 'react';
 
 import {connect} from 'react-redux';
 
-
 import OverlayEffect from 'overlay-reveal-effect';
 
-//import MouseTrail from 'root/components/MouseTrail';
-
 import AboutPage from './content/About';
-//import TweenMax from 'gsap/TweenMax';
+import ContactPage from './content/Contact';
+import EducationPage from './content/Education';
+import ExperiencePage from './content/Experience';
+import SkillsPage from './content/Skills';
+import AccomplishmentsPage from './content/Accomplishments';
 
-//const mouseTrail = lazy(() => import('root/utility/mouse-trail'));
-
-//import mouseTrail from 'root/utility/mouse-trail';
-
-// import ContactPage from 'root/pages/Contact';
-// import EducationPage from 'root/pages/Education';
-// import ExperiencePage from 'root/pages/Experience';
-// import SkillsPage from 'root/pages/Skills';
-// import AccomplishmentsPage from 'root/pages/Accomplishments';
-
-//import {} from './style';
+import {WrapContent} from './style';
 
 const Overlays = React.memo(function Overlays({page}) {
   const canvasEl = useRef(null);
@@ -29,38 +20,34 @@ const Overlays = React.memo(function Overlays({page}) {
     const viewport = document.getElementById('overlay-viewport');
     const canvas = canvasEl.current;
 
-    import('root/utils/mouse-trail')
-    .then((module) => {
+    (async () => {
+      const module = await import('root/utils/mouse-trail');
       module.default(viewport, canvas);
-    });
-
-
-    // (async () => {
-    //   const moduleSpecifier = './utils.mjs';
-    //   const module = await import(moduleSpecifier)
-    //   module.default();
-    //
-    // })();
+    })();
   }, []);
 
   const renderContent = () => {
     const pages = {
       'front': <AboutPage/>,
-  /*    'back': <ContactPage/>,
+      'back': <ContactPage/>,
       'right': <EducationPage/>,
       'left': <ExperiencePage/>,
       'top': <SkillsPage/>,
-      'bottom': <AccomplishmentsPage/>,*/
+      'bottom': <AccomplishmentsPage/>,
     };
     return pages[page.active] || null;
   };
 
   return (
-      <OverlayEffect style={{height: '100%', overflow: 'hidden'}}
-                     id='overlay-viewport'
-                     isOpen={!!page.active}
-                     direction={'bottom-right'}>
-        {renderContent()}
+      <OverlayEffect
+          style={{height: '100%', overflow: 'hidden'}}
+          id='overlay-viewport'
+          isOpen={!!page.active}
+          direction={'bottom-right'}
+      >
+        <WrapContent>
+          {renderContent()}
+        </WrapContent>
         <canvas ref={canvasEl} style={{opacity: .1}}/>
       </OverlayEffect>
   );
@@ -70,4 +57,4 @@ const mapStateToProps = ({page}) => ({
   page,
 });
 
-export default connect(mapStateToProps, null)(Overlays)
+export default connect(mapStateToProps, null)(Overlays);
