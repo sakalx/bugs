@@ -2,7 +2,7 @@ import React, {useLayoutEffect} from 'react';
 
 import 'particles.js';
 
-import particles from 'root/utility/particles';
+import particles from 'root/utils/particles';
 
 const Particles = React.memo(function Particles() {
 

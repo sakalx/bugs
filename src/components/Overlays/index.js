@@ -29,7 +29,7 @@ const Overlays = React.memo(function Overlays({page}) {
     const viewport = document.getElementById('overlay-viewport');
     const canvas = canvasEl.current;
 
-    import('root/utility/mouse-trail')
+    import('root/utils/mouse-trail')
     .then((module) => {
       module.default(viewport, canvas);
     });
