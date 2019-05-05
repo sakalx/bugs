@@ -1,4 +1,4 @@
-import React, {useLayoutEffect, useRef} from 'react';
+import React from 'react';
 
 import {connect} from 'react-redux';
 
@@ -10,21 +10,11 @@ import EducationPage from './content/Education';
 import ExperiencePage from './content/Experience';
 import SkillsPage from './content/Skills';
 import AccomplishmentsPage from './content/Accomplishments';
+import MouseTrail from 'root/components/MouseTrail';
 
 import {WrapContent} from './style';
 
-const Overlays = React.memo(function Overlays({page}) {
-  const canvasEl = useRef(null);
-
-  useLayoutEffect(() => {
-    const viewport = document.getElementById('overlay-viewport');
-    const canvas = canvasEl.current;
-
-    (async () => {
-      const module = await import('root/utils/mouse-trail');
-      module.default(viewport, canvas);
-    })();
-  }, []);
+function Overlays({page}) {
 
   const renderContent = () => {
     const pages = {
@@ -40,7 +30,7 @@ const Overlays = React.memo(function Overlays({page}) {
 
   return (
       <OverlayEffect
-          style={{height: '100%', overflow: 'hidden'}}
+          style={{overflow: 'hidden'}}
           id='overlay-viewport'
           isOpen={!!page.active}
           direction={'bottom-right'}
@@ -48,13 +38,13 @@ const Overlays = React.memo(function Overlays({page}) {
         <WrapContent>
           {renderContent()}
         </WrapContent>
-        <canvas ref={canvasEl} style={{opacity: .1}}/>
+        <MouseTrail/>
       </OverlayEffect>
   );
-});
+}
 
 const mapStateToProps = ({page}) => ({
   page,
 });
 
-export default connect(mapStateToProps, null)(Overlays);
+export default connect(mapStateToProps, null)(React.memo(Overlays));

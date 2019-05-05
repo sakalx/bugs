@@ -1,13 +1,11 @@
 import React, {useLayoutEffect} from 'react';
 
-import 'particles.js';
-
-import particles from 'root/utils/particles';
-
-const Particles = React.memo(function Particles() {
-
+function Particles() {
   useLayoutEffect(() => {
-    particles('particles-effect');
+    (async () => {
+      const module = await import('root/utils/particles');
+      module.default('particles-effect');
+    })();
   }, []);
 
   return (
@@ -20,6 +18,6 @@ const Particles = React.memo(function Particles() {
             zIndex: 1,
           }}/>
   );
-});
+}
 
-export default Particles;
+export default React.memo(Particles);

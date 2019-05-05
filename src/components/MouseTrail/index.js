@@ -1,20 +1,21 @@
 import React, {useRef, useLayoutEffect} from 'react';
 
-import mouseTrail from 'root/utility/mouse-trail';
-
-const MouseTrail = React.memo(function MouseTrail() {
+function MouseTrail() {
   const canvasEl = useRef(null);
 
   useLayoutEffect(() => {
     const viewport = document.getElementById('overlay-viewport');
     const canvas = canvasEl.current;
 
-    mouseTrail(viewport, canvas)
+    (async () => {
+      const module = await import('root/utils/mouse-trail');
+      module.default(viewport, canvas);
+    })();
   }, []);
 
   return (
       <canvas ref={canvasEl} style={{opacity: .1}}/>
   );
-});
+}
 
-export default MouseTrail
+export default React.memo(MouseTrail);

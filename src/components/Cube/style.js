@@ -2,14 +2,13 @@ import styled, {css, keyframes} from 'styled-components';
 
 import Cube3D from 'react-cube3d-component';
 
-import CancelIcon from '@material-ui/icons/Cancel';
-
-import About from 'root/svg/AboutIcon';
-import Accomplishments from 'root/svg/AccomplishmentsIcon';
-import Contact from 'root/svg/ContactIcon';
-import Education from 'root/svg/EducationIcon';
-import Experience from 'root/svg/ExperienceIcon';
-import Skills from 'root/svg/SkillsIcon';
+import About from 'root/svg/About';
+import Accomplishments from 'root/svg/Accomplishments';
+import Close from 'root/svg/Close';
+import Contact from 'root/svg/Contact';
+import Education from 'root/svg/Education';
+import Experience from 'root/svg/Experience';
+import Skills from 'root/svg/Skills';
 
 const moveCube = keyframes`
   0% {
@@ -62,7 +61,8 @@ export const ExperienceIcon = styled(Experience)`
 export const SkillsIcon = styled(Skills)`
   ${_iconStyle}
 `;
-export const CloseIcon = styled(CancelIcon)`
+
+export const CloseIcon = styled(Close)`
   font-size: 100px !important;
   pointer-events: none;
 `;

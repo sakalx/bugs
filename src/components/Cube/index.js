@@ -14,7 +14,7 @@ import {
   SkillsIcon,
 } from './style';
 
-const data = [
+const sides = [
   {
     index: 'front',
     label: 'About',
@@ -42,7 +42,6 @@ const data = [
   },
 ];
 
-
 function CubeComponent({page}) {
 
   return (
@@ -51,7 +50,7 @@ function CubeComponent({page}) {
           viewportSize='70vmin'
           reveal={!!page.active}
       >
-        {data.map(({index, label, Icon}) =>
+        {sides.map(({index, label, Icon}) =>
             <Side key={index} label={label} index={index}>
               {page.active ?  <CloseIcon/> : Icon}
             </Side>,

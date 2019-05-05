@@ -4,6 +4,29 @@ function ContactPage() {
   return (
       <section>
         <h1>Contact Page</h1>
+
+        <strong>Serhii Sakal</strong>
+
+        <span>icon</span>
+        <a href='https://linkedin.com/in/serhii-sakal'>
+          <strong>LinkedIn</strong>
+        </a>
+
+        <span>icon GitHub</span>
+        <a href='https://github.com/sakalx'>
+          <strong>@sakalx</strong>
+        </a>
+
+        <span>icon Phone</span>
+        <strong>Phone</strong>
+        <a href='tel:1-929-238-3363'>1-929-238-3363</a>
+
+        <span>icon @</span>
+        <address>
+         <a href='mailto:serhii.sakal@gmail.com'>serhii.sakal@gmail.com</a>.
+         <a href='mailto:sakal.s@hotmail.com'>sakal.s@hotmail.com</a>.<br/>
+         <a href='mailto:sakals@mail.ua'>sakals@mail.ua</a>.<br/>
+        </address>
       </section>
   );
 }
