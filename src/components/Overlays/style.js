@@ -1,12 +1,9 @@
 import styled from 'styled-components';
 
 export const WrapContent = styled('div')`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: center;
+  height: 100vh;
+  overflow-y: auto;
   position: absolute;
-  width: 100%;
+  width: 100vw;
   z-index: 1;
 `;

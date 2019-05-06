@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useLayoutEffect} from 'react';
 
 import {connect} from 'react-redux';
 
@@ -15,7 +15,6 @@ import MouseTrail from 'root/components/MouseTrail';
 import {WrapContent} from './style';
 
 function Overlays({page}) {
-
   const renderContent = () => {
     const pages = {
       'front': <AboutPage/>,
@@ -30,10 +29,13 @@ function Overlays({page}) {
 
   return (
       <OverlayEffect
-          style={{overflow: 'hidden'}}
           id='overlay-viewport'
           isOpen={!!page.active}
           direction={'bottom-right'}
+
+          style={{  position: 'relative',
+            width: '600px',
+            height: '400px'}}
       >
         <WrapContent>
           {renderContent()}

@@ -3,8 +3,8 @@ const webpack = require('webpack');
 
 // Plugins
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconWebpackPlugin = require('favicons-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // Folders:
 const development = 'src';
@@ -46,6 +46,13 @@ module.exports = (env, argv = {}) => {
     },
   ];
   const imgConfig = isProd ? imgProd : imgDev;
+
+  const svgConfig = {
+    loader: 'svg-sprite-loader',
+    options: {
+      symbolId: 'icon-[name]',
+    },
+  };
 
 //============================================================
   // Plugins:
@@ -120,6 +127,11 @@ module.exports = (env, argv = {}) => {
           include: path.resolve(__dirname, `${development}/static/img`),
           use: imgConfig,
         },
+        {
+          test: /\.svg$/,
+          include: path.resolve(__dirname, `${development}/static/svg`),
+          use: svgConfig,
+        }
       ],
     },
 
