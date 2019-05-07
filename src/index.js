@@ -21,3 +21,17 @@ ReactDOM.render(
       </MuiThemeProvider>
     </React.Fragment>
     , document.getElementById('bugs-start-here'));
+
+if (false) {
+  console.log('load from cache');
+} else {
+  (async () => {
+    const module = await import('root/static/svg/symbol/svg/sprite.symbol.svg');
+
+
+    var p = document.createElement("div");
+    p.innerHTML = module.default;
+    p.style.display = "none";
+    document.body.appendChild(p);
+  })();
+}

@@ -127,11 +127,12 @@ module.exports = (env, argv = {}) => {
           include: path.resolve(__dirname, `${development}/static/img`),
           use: imgConfig,
         },
+        // SVL - loader
         {
           test: /\.svg$/,
+          loader: 'svg-inline-loader',
           include: path.resolve(__dirname, `${development}/static/svg`),
-          use: svgConfig,
-        }
+        },
       ],
     },
 
