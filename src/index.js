@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import insertSVG from './utils/insert-svg';
+
 import {Provider} from 'react-redux';
 import store from './redux-core/store';
 
@@ -20,18 +22,6 @@ ReactDOM.render(
         </Provider>
       </MuiThemeProvider>
     </React.Fragment>
-    , document.getElementById('bugs-start-here'));
+    , document.getElementById('root'));
 
-if (false) {
-  console.log('load from cache');
-} else {
-  (async () => {
-    const module = await import('root/static/svg/symbol/svg/sprite.symbol.svg');
-
-
-    var p = document.createElement("div");
-    p.innerHTML = module.default;
-    p.style.display = "none";
-    document.body.appendChild(p);
-  })();
-}
+insertSVG();
