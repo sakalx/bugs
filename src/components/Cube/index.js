@@ -6,25 +6,18 @@ import Side from './Side';
 import {Cube, Icon} from './style';
 
 const sides = [
-  {
-    index: 'front',
-    label: 'About',
-  }, {
-    index: 'back',
-    label: 'Contact',
-  }, {
-    index: 'right',
-    label: 'Education',
-  }, {
-    index: 'left',
-    label: 'Experience',
-  }, {
-    index: 'top',
-    label: 'Skills',
-  }, {
-    index: 'bottom',
-    label: 'Accomplishments',
-  },
+  // Front
+  'About',
+  // Back
+  'Contact',
+  // Right
+  'Education',
+  // Left
+  'Experience',
+  // Top
+  'Skills',
+  // Bottom
+  'Accomplishments',
 ];
 
 function CubeComponent({page}) {
@@ -35,8 +28,8 @@ function CubeComponent({page}) {
           viewportSize='70vmin'
           reveal={!!page.active}
       >
-        {sides.map(({index, label}) =>
-            <Side key={index} label={label} index={index}>
+        {sides.map((label) =>
+            <Side key={label} label={label}>
               {page.active
                   ? <Icon id='icon-Close'/>
                   : <Icon id={`icon-${label}`}/>

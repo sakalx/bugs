@@ -1,28 +1,32 @@
-import React, {useLayoutEffect} from 'react';
+import React, {useEffect} from 'react';
 
 import {connect} from 'react-redux';
 
 import OverlayEffect from 'overlay-reveal-effect';
 
-import AboutPage from './content/About';
-import ContactPage from './content/Contact';
-import EducationPage from './content/Education';
-import ExperiencePage from './content/Experience';
-import SkillsPage from './content/Skills';
-import AccomplishmentsPage from './content/Accomplishments';
+import AboutPage from 'root/pages/About';
+import ContactPage from 'root/pages/Contact';
+import EducationPage from 'root/pages/Education';
+import ExperiencePage from 'root/pages/Experience';
+import SkillsPage from 'root/pages/Skills';
+import AccomplishmentsPage from 'root/pages/Accomplishments';
 import MouseTrail from 'root/components/MouseTrail';
 
 import {WrapContent} from './style';
 
 function Overlays({page}) {
+  useEffect(() => {
+    document.title = page.active ? `Sakal ${page.active}` : 'Sakal S';
+  }, [page.active]);
+
   const renderContent = () => {
     const pages = {
-      'front': <AboutPage/>,
-      'back': <ContactPage/>,
-      'right': <EducationPage/>,
-      'left': <ExperiencePage/>,
-      'top': <SkillsPage/>,
-      'bottom': <AccomplishmentsPage/>,
+      'About': <AboutPage/>,
+      'Contact': <ContactPage/>,
+      'Education': <EducationPage/>,
+      'Experience': <ExperiencePage/>,
+      'Skills': <SkillsPage/>,
+      'Accomplishments': <AccomplishmentsPage/>,
     };
     return pages[page.active] || null;
   };
@@ -32,10 +36,11 @@ function Overlays({page}) {
           id='overlay-viewport'
           isOpen={!!page.active}
           direction={'bottom-right'}
-
-          style={{  position: 'relative',
-            width: '600px',
-            height: '400px'}}
+          style={{
+            position: 'relative',
+            /*   width: '600px',
+               height: '400px',*/
+          }}
       >
         <WrapContent>
           {renderContent()}

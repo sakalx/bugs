@@ -9,7 +9,6 @@ let isClick = false;
 
 function Side({
                     children,
-                    index,
                     label,
                     page,
                     showPage,
@@ -39,7 +38,7 @@ function Side({
           onMouseUp={handleMouseUp}
           onTouchStart={e => handleMouseDown(e.changedTouches[0])}
           square
-          side-index={index}
+          side-index={label}
       >
         <Title variant='h6' gutterBottom>
           {label}
