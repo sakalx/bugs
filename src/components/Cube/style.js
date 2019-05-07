@@ -1,14 +1,7 @@
 import styled, {css, keyframes} from 'styled-components';
 
 import Cube3D from 'react-cube3d-component';
-
-import About from 'root/svg/About';
-import Accomplishments from 'root/svg/Accomplishments';
-import Close from 'root/svg/Close';
-import Contact from 'root/svg/Contact';
-import Education from 'root/svg/Education';
-import Experience from 'root/svg/Experience';
-import Skills from 'root/svg/Skills';
+import SvgIcon from 'root/components/SvgIcon';
 
 const moveCube = keyframes`
   0% {
@@ -33,36 +26,12 @@ export const Cube = styled(Cube3D)`
   `};
 `;
 
-const _iconStyle = css`
-  font-size: 65px !important;
+export const Icon = styled(SvgIcon)`
   pointer-events: none;
+  width: 23vmin;
+  height: 23vmin;
 `;
 
-export const AboutIcon = styled(About)`
-  ${_iconStyle}
-`;
-
-export const AccomplishmentsIcon = styled(Accomplishments)`
-  ${_iconStyle}
-`;
-
-export const ContactIcon = styled(Contact)`
-  ${_iconStyle}
-`;
-
-export const EducationIcon = styled(Education)`
-  ${_iconStyle}
-`;
-
-export const ExperienceIcon = styled(Experience)`
-  ${_iconStyle}
-`;
-
-export const SkillsIcon = styled(Skills)`
-  ${_iconStyle}
-`;
-
-export const CloseIcon = styled(Close)`
-  font-size: 100px !important;
-  pointer-events: none;
-`;
+//font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+// font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+// font-size: calc(12px + 2vmin);

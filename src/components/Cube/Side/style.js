@@ -13,5 +13,6 @@ export const Wrap = styled(Paper)`
 `;
 
 export const Title = styled(Typography)`
+  font-size: calc(12px + 2vmin) !important;
   pointer-events: none;
 `;
