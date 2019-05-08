@@ -11,6 +11,7 @@ function Particles() {
   return (
       <div
           id='particles-effect'
+          aria-labelledby='particles-background'
           style={{
             height: '100vh',
             position: 'absolute',

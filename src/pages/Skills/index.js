@@ -1,25 +1,27 @@
 import React from 'react';
 
-// TODO make dynamic <title/> in head HTML //<title>Why You Should Eat Chicken</title>
-// NOTE <a href="http://somerandomwebsite.com/" rel="nofollow">your anchor text</a>
+// NOTE <a aria-labelledby href="http://somerandomwebsite.com/" rel="nofollow">your anchor text</a>
+// FIXME role="button" role="main"
+// role="Definition" ro" definition
+
+import PageTitle from 'root/components/PageTitle';
 
 function SkillsPage() {
   return (
-      <section>
-      {/*  <article>
+      <article role='article' aria-labelledby='list of skills'>
+        <PageTitle title='Skills.'/>
+
+        {/*  <article>
           <header>
             <h1>This is the heading.</h1>
             <h4>This is the sub-heading.</h4>
             <p>This is the metadata.</p>
           </header>
         </article>*/}
-        <header>
-          <h1>Skills Page</h1>
-        </header>
 
         <strong>Industry Knowledge</strong>
-        <ul>
-          <li><strong>Functional Programming</strong></li>
+        <ul role='list'>
+          <li role='listitem'><strong>Functional Programming</strong></li>
           <li>MVC</li>
           <li>OOP</li>
           <li>Responsive Web Design</li>
@@ -66,7 +68,7 @@ function SkillsPage() {
           <li>Teamwork</li>
         </ul>
 
-      </section>
+      </article>
   );
 }
 

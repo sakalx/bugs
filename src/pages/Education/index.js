@@ -1,9 +1,11 @@
 import React from 'react';
 
+import PageTitle from 'root/components/PageTitle';
+
 function EducationPage() {
   return (
-      <section>
-        <h1>Education Page</h1>
+      <article role='article' aria-labelledby='described education'>
+        <PageTitle title='Education.'/>
 
         <p>
           <span>add icon</span>
@@ -61,7 +63,7 @@ function EducationPage() {
           </a>
         </p>
 
-      </section>
+      </article>
   );
 }
 

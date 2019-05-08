@@ -1,9 +1,11 @@
 import React from 'react';
 
+import PageTitle from 'root/components/PageTitle';
+
 function ExperiencePage() {
   return (
-      <section>
-        <h1>Experience Page</h1>
+      <article role='article' aria-labelledby='list of work experience'>
+        <PageTitle title='Experience.'/>
 
         <p>
           <span>add icon</span>
@@ -144,7 +146,7 @@ function ExperiencePage() {
             </li>
           </ul>
         </p>
-      </section>
+      </article>
   );
 }
 

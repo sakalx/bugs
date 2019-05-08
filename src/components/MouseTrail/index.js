@@ -14,7 +14,7 @@ function MouseTrail() {
   }, []);
 
   return (
-      <canvas ref={canvasEl} style={{opacity: .1}}/>
+      <canvas ref={canvasEl} style={{opacity: .1}} aria-labelledby='mouse-trail'/>
   );
 }
 

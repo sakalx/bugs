@@ -1,9 +1,11 @@
 import React from 'react';
 
+import PageTitle from 'root/components/PageTitle';
+// aria-describedby
 function AboutPage() {
   return (
-      <section>
-        <h1>About Page</h1>
+      <article role='article' aria-labelledby='described about sakal'>
+        <PageTitle title='About Me.'/>
 
         <h2>
           Hi my name is <strong>Serhii</strong>.
@@ -38,7 +40,7 @@ function AboutPage() {
           Insatiable desire to grow, learn and improve skills.
         </p>
 
-      </section>
+      </article>
   );
 }
 

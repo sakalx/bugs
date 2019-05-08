@@ -24,9 +24,11 @@ function CubeComponent({page}) {
 
   return (
       <Cube
+          aria-labelledby='cube-navigation'
           cubeSize='50vmin'
-          viewportSize='70vmin'
           reveal={!!page.active}
+          role='navigation'
+          viewportSize='70vmin'
       >
         {sides.map((label) =>
             <Side key={label} label={label}>

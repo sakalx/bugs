@@ -1,10 +1,20 @@
 import React from 'react';
 
-function PageTitle({title, ...rest}) {
+import {connect} from 'react-redux';
+
+import {Icon, Header, Title} from './style';
+
+function PageTitle({title, page}) {
   return (
-      <h1>{title}</h1>
-  )
+      <Header role='heading' aria-labelledby={page.active}>
+        <Title aria-labelledby={title}>{title}</Title>
+        <Icon id={`icon-${page.active}`}/>
+      </Header>
+  );
 }
 
+const mapStateToProps = ({page}) => ({
+  page,
+});
 
-export default PageTitle;
+export default connect(mapStateToProps, null)(PageTitle);

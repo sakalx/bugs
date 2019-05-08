@@ -1,12 +1,13 @@
 import React from 'react';
 
 function SvgIcon({
-                   id,
+                   ariaLabelledby = 'icon',
                    color = '#000',
+                   id,
                    ...rest
                  }) {
   return (
-      <svg {...rest}>
+      <svg aria-labelledby={id} role='img' {...rest}>
         <use fill={color} xlinkHref={`#${id}`}/>
       </svg>
   );

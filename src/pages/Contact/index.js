@@ -1,11 +1,14 @@
 import React from 'react';
 
+import PageTitle from 'root/components/PageTitle';
+
 function ContactPage() {
   return (
-      <section>
-        <h1>Contact Page</h1>
+      <section role='contentinfo' aria-labelledby='contact information'>
+        <PageTitle title='Contact.'/>
 
-        <strong>Serhii Sakal</strong>
+
+        {/*<strong>Serhii Sakal</strong>*/}
 
         <span>icon</span>
         <a href='https://linkedin.com/in/serhii-sakal'>

@@ -33,16 +33,17 @@ function Overlays({page}) {
 
   return (
       <OverlayEffect
+          direction={'bottom-right'}
           id='overlay-viewport'
           isOpen={!!page.active}
-          direction={'bottom-right'}
+          aria-labelledby='overlay'
           style={{
             position: 'relative',
             /*   width: '600px',
                height: '400px',*/
           }}
       >
-        <WrapContent>
+        <WrapContent role='dialog'>
           {renderContent()}
         </WrapContent>
         <MouseTrail/>

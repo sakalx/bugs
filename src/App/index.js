@@ -9,7 +9,7 @@ import Overlays from 'root/components/Overlays';
 
 function App() {
   return (
-      <Wrap>
+      <Wrap role='main'>
         <Cube/>
         <Particles/>
         <Overlays/>

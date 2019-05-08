@@ -8,11 +8,11 @@ import {Wrap, Title} from './style';
 let isClick = false;
 
 function Side({
-                    children,
-                    label,
-                    page,
-                    showPage,
-                  }) {
+                children,
+                label,
+                page,
+                showPage,
+              }) {
   const handleMouseDown = () => {
     isClick = true;
     setTimeout(() => isClick = false, 100);
@@ -20,7 +20,7 @@ function Side({
 
   const handleMouseUp = ({target}) => {
     if (!isClick) return;
-    const sideIndex = target.attributes['side-index'].value;
+    const sideIndex = target.attributes['aria-labelledby'].value;
 
     (page.active)
         ? showPage(null)
@@ -31,16 +31,20 @@ function Side({
 
   return (
       <Wrap
-          aria-label={`${label}-info`}
+          aria-labelledby={label}
           component='section'
           elevation={12}
           onMouseDown={handleMouseDown}
           onMouseUp={handleMouseUp}
           onTouchStart={e => handleMouseDown(e.changedTouches[0])}
+          role='button'
           square
-          side-index={label}
       >
-        <Title variant='h6' gutterBottom>
+        <Title
+            role='heading'
+            variant='h6'
+            gutterBottom
+        >
           {label}
         </Title>
         {children}

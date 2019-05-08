@@ -27,11 +27,7 @@ export const Cube = styled(Cube3D)`
 `;
 
 export const Icon = styled(SvgIcon)`
+  height: 23vmin;
   pointer-events: none;
   width: 23vmin;
-  height: 23vmin;
 `;
-
-//font-size: calc(16px + 6 * ((100vw - 320px) / 680));
-// font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-// font-size: calc(12px + 2vmin);
