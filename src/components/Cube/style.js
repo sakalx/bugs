@@ -28,6 +28,5 @@ export const Cube = styled(Cube3D)`
 
 export const Icon = styled(SvgIcon)`
   height: 23vmin;
-  pointer-events: none;
   width: 23vmin;
 `;

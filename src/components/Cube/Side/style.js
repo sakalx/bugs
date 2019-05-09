@@ -9,7 +9,7 @@ export const Wrap = styled('div')`
   user-select: none;
 `;
 
-export const Title = styled('h4')`
-  font-size: calc(12px + 2vmin) !important;
+export const Title = styled('h3')`
   pointer-events: none;
+  text-transform: uppercase;
 `;

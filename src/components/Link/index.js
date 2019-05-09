@@ -1,11 +1,19 @@
 import React from 'react';
 
-
-import {Wrap} from './style';
-
-function Link({children}) {
+function Link({
+                href,
+                children,
+              }) {
   return (
-      <Wrap/>
+      <a
+          href={href}
+          rel='nofollow'
+          role='link'
+          target='_blank'
+          title={children}
+      >
+        {children}
+      </a>
   );
 }
 

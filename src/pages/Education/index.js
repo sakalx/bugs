@@ -1,6 +1,8 @@
 import React from 'react';
 
 import Header from 'root/components/Header';
+import Link from 'root/components/Link';
+
 
 function EducationPage() {
   return (
@@ -9,7 +11,11 @@ function EducationPage() {
 
         <p>
           <span>add icon</span>
-          <a href='http://www.lp.edu.ua/en'>
+          <Link href={'#'}>
+            Lviv Polytechnic National University
+          </Link>
+        </p>
+          {/*<a href='http://www.lp.edu.ua/en'>
             Lviv Polytechnic National University - Bachelor’s Degree,
             Computer Engineering
           </a>
@@ -62,7 +68,7 @@ function EducationPage() {
             certificate
           </a>
         </p>
-
+*/}
       </article>
   );
 }

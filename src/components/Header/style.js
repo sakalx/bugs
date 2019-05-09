@@ -11,10 +11,10 @@ export const Title = styled('h1')`
   flex: 1;
   margin-left: 20vmin;
   text-align: center;
+  text-transform: uppercase;
 `;
 
 export const Icon = styled(SvgIcon)`
   height: 20vmin;
-  pointer-events: none;
   width: 20vmin;
 `;
