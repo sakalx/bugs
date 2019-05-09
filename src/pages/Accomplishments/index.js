@@ -1,11 +1,11 @@
 import React from 'react';
 
-import PageTitle from 'root/components/PageTitle';
+import Header from 'root/components/Header';
 
 function AccomplishmentsPage() {
   return (
       <article role='article' aria-labelledby='list of accomplishments'>
-        <PageTitle title='Accomplishments.'/>
+        <Header title='Accomplishments.'/>
         <ul>
           <li>
             <strong>

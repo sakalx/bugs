@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import SvgIcon from 'root/components/SvgIcon';
 
-export const Header = styled('header')`
+export const Wrap = styled('header')`
   align-items: center;
   display: flex;
 `;

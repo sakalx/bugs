@@ -6,21 +6,18 @@ import insertSVG from './utils/insert-svg';
 import {Provider} from 'react-redux';
 import store from './redux-core/store';
 
-import CssBaseline from '@material-ui/core/CssBaseline';
-import {MuiThemeProvider} from '@material-ui/core/styles';
-import muiTheme from './theme';
+import BaselineStyle from './theme/baselineStyle';
 
 import App from './App/';
 
 ReactDOM.render(
     <React.Fragment>
-      <CssBaseline/>
+      <BaselineStyle/>
 
-      <MuiThemeProvider theme={muiTheme}>
-        <Provider store={store}>
-          <App/>
-        </Provider>
-      </MuiThemeProvider>
+      <Provider store={store}>
+        <App/>
+      </Provider>
+
     </React.Fragment>
     , document.getElementById('root'));
 

@@ -4,12 +4,12 @@ import React from 'react';
 // FIXME role="button" role="main"
 // role="Definition" ro" definition
 
-import PageTitle from 'root/components/PageTitle';
+import Header from 'root/components/Header';
 
 function SkillsPage() {
   return (
       <article role='article' aria-labelledby='list of skills'>
-        <PageTitle title='Skills.'/>
+        <Header title='Skills.'/>
 
         {/*  <article>
           <header>

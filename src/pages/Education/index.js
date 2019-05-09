@@ -1,11 +1,11 @@
 import React from 'react';
 
-import PageTitle from 'root/components/PageTitle';
+import Header from 'root/components/Header';
 
 function EducationPage() {
   return (
       <article role='article' aria-labelledby='described education'>
-        <PageTitle title='Education.'/>
+        <Header title='Education.'/>
 
         <p>
           <span>add icon</span>

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import PageTitle from 'root/components/PageTitle';
+import Header from 'root/components/Header';
 
 function ContactPage() {
   return (
       <section role='contentinfo' aria-labelledby='contact information'>
-        <PageTitle title='Contact.'/>
+        <Header title='Contact.'/>
 
 
         {/*<strong>Serhii Sakal</strong>*/}

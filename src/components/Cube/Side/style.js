@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-
-export const Wrap = styled(Paper)`
+export const Wrap = styled('div')`
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -12,7 +9,7 @@ export const Wrap = styled(Paper)`
   user-select: none;
 `;
 
-export const Title = styled(Typography)`
+export const Title = styled('h4')`
   font-size: calc(12px + 2vmin) !important;
   pointer-events: none;
 `;

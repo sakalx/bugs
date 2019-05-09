@@ -11,13 +11,13 @@ export default {
       'value': '#9e9e9e',
     },
     'shape': {
-      'type': 'polygon',
+      'type': 'edge',
       'stroke': {
         'width': 0,
         'color': '#616161',
       },
       'polygon': {
-        'nb_sides': 5,
+        'nb_sides': 4,
       },
       'image': {
         'src': 'img/github.svg',
@@ -89,9 +89,9 @@ export default {
       },
       'bubble': {
         'distance': 400,
-        'size': 12,
-        'duration': 1,
-        'opacity': 0.7,
+        'size': 125,
+        'duration': 2,
+        'opacity': 0.5,
         'speed': 3,
       },
       'repulse': {

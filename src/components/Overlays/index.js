@@ -2,6 +2,8 @@ import React, {useEffect} from 'react';
 
 import {connect} from 'react-redux';
 
+import setDocTitle from 'root/utils/doc-title';
+
 import OverlayEffect from 'overlay-reveal-effect';
 
 import AboutPage from 'root/pages/About';
@@ -15,9 +17,7 @@ import MouseTrail from 'root/components/MouseTrail';
 import {WrapContent} from './style';
 
 function Overlays({page}) {
-  useEffect(() => {
-    document.title = page.active ? `Sakal ${page.active}` : 'Sakal S';
-  }, [page.active]);
+  useEffect(() => setDocTitle(page.active), [page.active]);
 
   const renderContent = () => {
     const pages = {

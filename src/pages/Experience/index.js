@@ -1,11 +1,11 @@
 import React from 'react';
 
-import PageTitle from 'root/components/PageTitle';
+import Header from 'root/components/Header';
 
 function ExperiencePage() {
   return (
       <article role='article' aria-labelledby='list of work experience'>
-        <PageTitle title='Experience.'/>
+        <Header title='Experience.'/>
 
         <p>
           <span>add icon</span>
