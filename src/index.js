@@ -6,13 +6,14 @@ import insertSVG from './utils/insert-svg';
 import {Provider} from 'react-redux';
 import store from './redux-core/store';
 
-import BaselineStyle from './theme/baselineStyle';
+import CssBaseline from './theme';
 
 import App from './App/';
 
+console.time('ReactDOM.render');
 ReactDOM.render(
     <React.Fragment>
-      <BaselineStyle/>
+      <CssBaseline/>
 
       <Provider store={store}>
         <App/>
@@ -20,5 +21,6 @@ ReactDOM.render(
 
     </React.Fragment>
     , document.getElementById('root'));
+console.timeEnd('ReactDOM.render');
 
 insertSVG();

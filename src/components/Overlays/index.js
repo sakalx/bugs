@@ -28,20 +28,19 @@ function Overlays({page}) {
       'Skills': <SkillsPage/>,
       'Accomplishments': <AccomplishmentsPage/>,
     };
-    return pages[page.active] || null;
+
+    return pages[page.active] || pages[page.prev];
   };
 
   return (
       <OverlayEffect
+          mainFon='#fff'
+          secondaryFon='#ce8fff'
+          aria-labelledby='overlay'
           direction={'bottom-right'}
           id='overlay-viewport'
           isOpen={!!page.active}
-          aria-labelledby='overlay'
-          style={{
-            position: 'relative',
-            /*   width: '600px',
-               height: '400px',*/
-          }}
+          style={{position: 'relative'}}
       >
         <WrapContent role='dialog'>
           {renderContent()}
