@@ -25,17 +25,17 @@ function AboutPage() {
           facilitating client guidance and troubleshooting.
         </Sentence>
         <Sentence>
-          As a strategic thinker, I incisively analyze risks & opportunities
-          to develop plans with an ability to combine top-level academic
-          training with real-world experience during critical conditions.
-        </Sentence>
-        <Sentence>
           During my career, I have been highly adaptable while thriving within
           fast-paced environments by effectively utilizing cross-cultural
           communications. I showcase a unique ability to operate effectively
           both independently and collaboratively as part of a team to meet
           strict deadlines and project specifications.
           Insatiable desire to grow, learn and improve skills.
+        </Sentence>
+        <Sentence>
+          As a strategic thinker, I incisively analyze risks & opportunities
+          to develop plans with an ability to combine top-level academic
+          training with real-world experience during critical conditions.
         </Sentence>
       </article>
   );

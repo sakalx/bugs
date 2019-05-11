@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import insertSVG from './utils/insert-svg';
+import injectSVG from './utils/inject-svg';
+import injectFont from './utils/inject-font';
 
 import {Provider} from 'react-redux';
 import store from './redux-core/store';
@@ -23,4 +24,8 @@ ReactDOM.render(
     , document.getElementById('root'));
 console.timeEnd('ReactDOM.render');
 
-insertSVG();
+console.time('Injecting');
+injectSVG();
+injectFont('PT+Sans');
+injectFont('Akronim');
+console.timeEnd('Injecting');

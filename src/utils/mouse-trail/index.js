@@ -2,11 +2,11 @@ import TweenMax from 'gsap/TweenMax';
 
 export default function(viewportEl, canvasEl) {
   // Configuration.
-  const dots = 20; // How many dots to have.
+  const dots = 18; // How many dots to have.
   const speed = 5; // How fast to spin.
-  const fade = .1; // How much to fade. 1 all, 0.5 half, 0 none.
+  const fade = 0.02; // How much to fade. 1 all, 0.5 half, 0 none.
   const distance = 80; // Distance from the mouse.
-  const color = '#fff'; // Color of dots.
+  const color = '#000'; // Color of dots.
 
   const ctx = canvasEl.getContext('2d');
   const points = [];
@@ -36,7 +36,7 @@ export default function(viewportEl, canvasEl) {
   function render() {
     if (position.x === null || position.y === null) return;
 
-    ctx.fillStyle = `rgba(0,0,0, ${fade})`;
+    ctx.fillStyle = `rgba(255,255,255, ${fade})`;
     ctx.fillRect(0, 0, canvasEl.width, canvasEl.height);
 
     ctx.lineCap = 'round';

@@ -29,7 +29,7 @@ function Overlays({page}) {
       'Accomplishments': <AccomplishmentsPage/>,
     };
 
-    return pages[page.active] || pages[page.prev];
+    return pages[page.active] || pages[page.cache];
   };
 
   return (

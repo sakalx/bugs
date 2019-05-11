@@ -19,7 +19,7 @@ export default createGlobalStyle`
   };
   
   h3 {
-   font-size: calc(12px + 2vmin);
+    font-size: calc(12px + 2vmin);
   };
   
   div {
@@ -27,18 +27,17 @@ export default createGlobalStyle`
   };
   
   p {
-  
+    font-size: calc(10px + 2vmin);
   }
   p:first-letter {
-
     float: left;
-    font-size: 45px;
-    line-height: 30px;
-    padding-top: 4px;
-    padding-right: 8px;
+    font-family: 'Akronim', cursive;
+    font-size: calc(50px + 2vmin);
+    line-height: calc(30px + 2vmin);
     padding-left: 3px;
+    padding-right: 8px;
+    padding-top: 4px;
   }
-
 
   li {
     list-style-type: none;

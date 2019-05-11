@@ -6,16 +6,16 @@ const {
 
 const initState = {
   active: null,
-  prev: null,
+  cache: null,
 };
 
 export default function(state = initState, {type, payload}) {
   if (type === SHOW_PAGE) {
-    const prev = payload ? payload : state.prev;
+    const cache = payload ? payload : state.cache;
 
     return ({
       active: payload,
-      prev,
+      cache,
     });
   }
 
