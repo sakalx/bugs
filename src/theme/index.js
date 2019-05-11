@@ -50,7 +50,7 @@ export default createGlobalStyle`
     background-position: 100%;
     background-size: 200% 100%;
     text-decoration: none;
-    transition: background-position .3s ease-in-out;
+    transition: background-position 1s cubic-bezier(.32,2,.55,.27);
     position: relative;
   };
   
@@ -61,7 +61,7 @@ export default createGlobalStyle`
     height: 1px;
     position: absolute;
     right: 0;
-    transition: width .3s ease-in-out;
+    transition: width 1s cubic-bezier(.32,2,.55,.27);
     width: 0;
   }
   

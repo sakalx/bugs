@@ -8,7 +8,6 @@ import {Provider} from 'react-redux';
 import store from './redux-core/store';
 
 import CssBaseline from './theme';
-
 import App from './App/';
 
 console.time('ReactDOM.render');
