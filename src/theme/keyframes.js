@@ -2,7 +2,7 @@ import  {keyframes} from 'styled-components';
 
 export const fadeIn = keyframes`
   from {
-    transform: scale(.25);
+    transform: scale(5);
     opacity: 0;
   }
   to {
