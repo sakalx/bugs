@@ -1,9 +1,11 @@
 import {createGlobalStyle} from 'styled-components';
-// TODO h1 text-shadow: 4px 4px 4px #aaa;
+
+import {glitch} from './keyframes';
+
 export default createGlobalStyle`
   :root {
     --background-color: #fff;
-    --disabled-color: #bebebe;
+    --background-light-color: #bebebe;
     
     --primary-color: #2196f3;
     --primary-dark-color: #1769aa;
@@ -37,6 +39,10 @@ export default createGlobalStyle`
     padding-left: 3px;
     padding-right: 8px;
     padding-top: 4px;
+    text-shadow: 4px 4px 4px var(--background-light-color);
+  }
+  p:hover:first-letter {
+    color: var(--primary-dark-color);
   }
 
   li {

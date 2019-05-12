@@ -1,4 +1,4 @@
-import TweenMax from 'gsap/TweenMax';
+import TweenLite from 'gsap/TweenLite';
 
 export default function(viewportEl, canvasEl) {
   // Configuration.
@@ -19,7 +19,7 @@ export default function(viewportEl, canvasEl) {
   position.y = canvasEl.height / 2;
 
   viewportEl.addEventListener('mousemove', function(e) {
-    TweenMax.to(position, 0.3, {x: e.clientX, y: e.clientY, ease: 'linear'});
+    TweenLite.to(position, 0.3, {x: e.clientX, y: e.clientY, ease: 'linear'});
   });
 
   for (let i = 0; i < dots; i++) {

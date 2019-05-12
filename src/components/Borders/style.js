@@ -4,7 +4,7 @@ import {fadeIn} from 'root/theme/keyframes';
 import SvgIcon from 'root/components/SvgIcon'
 
 const cssBaseline = css`
-  animation: ${fadeIn} 1s cubic-bezier(.57,.21,.69,3.25);
+  animation: ${fadeIn} 2s cubic-bezier(.57,.21,.69,3.25);
   height: 90vmin;
   position: absolute;
   width: 90vmin;
