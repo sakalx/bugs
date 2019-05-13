@@ -8,7 +8,7 @@ function Header({title, page}) {
   return (
       <Wrap role='heading' aria-labelledby={page.active}>
         <Title aria-labelledby={title}>{title}</Title>
-        <Icon id={`icon-${page.active}`}/>
+        <Icon color='#6f6f6f' id={`icon-${page.active}`}/>
       </Wrap>
   );
 }

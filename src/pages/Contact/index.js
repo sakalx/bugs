@@ -9,7 +9,7 @@ function ContactPage() {
 
 
         {/*<strong>Serhii Sakal</strong>*/}
-
+        <address>Author: fred@example.com</address>
         <span>icon</span>
         <a href='https://linkedin.com/in/serhii-sakal'>
           <strong>LinkedIn</strong>

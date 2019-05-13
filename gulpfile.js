@@ -25,7 +25,7 @@ gulp.task('svg-sprite', () => gulp.src('minified/*.svg', {cwd: developSVG}).
     pipe(svgSprite({
       shape: {
         dimension: {maxWidth: 32, maxHeight: 32},
-        spacing: {padding: 3},
+        spacing: {padding: 1},
       },
       mode: {
         view: false,

@@ -13,26 +13,26 @@ const cssBaseline = css`
 
 export const TopLeft = styled(SvgIcon)`
   ${cssBaseline};
-  left: -9vmin;
-  top: -7.5vmin;
+  left: -4.7vmin;
+  top: -3vmin;
 `;
 
 export const TopRight = styled(SvgIcon)`
   ${cssBaseline};
-  top: -12vmin;
-  right: -11.5vmin;
+  top: -7.5vmin;
+  right: -7.2vmin;
 `;
 
 export const BottomRight = styled(SvgIcon)`
   ${cssBaseline};
-  bottom: -7.5vmin;
-  right: -9vmin;
+  bottom: -2.7vmin;
+  right: -5vmin;
 `;
 
 export const BottomLeft = styled(SvgIcon)`
   ${cssBaseline};
-  bottom: -12.5vmin;
-  left: -15.5vmin;
+  bottom: -8.5vmin;
+  left: -12vmin;
 `;
 
 

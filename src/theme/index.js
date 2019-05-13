@@ -1,7 +1,5 @@
 import {createGlobalStyle} from 'styled-components';
 
-import {glitch} from './keyframes';
-
 export default createGlobalStyle`
   :root {
     --background-color: #fff;
@@ -20,8 +18,18 @@ export default createGlobalStyle`
     //text-shadow: 4px 4px 4px #aaa;
   };
   
+  h1 {
+   font-size: calc(16px + 2vmin);
+  };
+  
+  h2 {
+    font-size: calc(14px + 2vmin);
+    text-shadow: 4px 4px 4px var(--background-light-color);
+  }
+  
   h3 {
     font-size: calc(12px + 2vmin);
+    text-shadow: 4px 4px 4px var(--background-light-color);
   };
   
   div {
@@ -31,16 +39,19 @@ export default createGlobalStyle`
   p {
     font-size: calc(10px + 2vmin);
   }
+    
   p:first-letter {
     float: left;
     font-family: 'Akronim', cursive;
     font-size: calc(50px + 2vmin);
+    font-weight: normal;
     line-height: calc(30px + 2vmin);
     padding-left: 3px;
     padding-right: 8px;
     padding-top: 4px;
     text-shadow: 4px 4px 4px var(--background-light-color);
   }
+  
   p:hover:first-letter {
     color: var(--primary-dark-color);
   }
@@ -55,9 +66,10 @@ export default createGlobalStyle`
     background-image: linear-gradient(to right, var(--secondary-color), var(--secondary-color) 50%, var(--primary-color) 50%);
     background-position: 100%;
     background-size: 200% 100%;
+    font-size: calc(10px + 2vmin);
+    position: relative;
     text-decoration: none;
     transition: background-position 1s cubic-bezier(.32,2,.55,.27);
-    position: relative;
   };
   
   a:after{
@@ -81,7 +93,8 @@ export default createGlobalStyle`
   }
   
   time {
-  
+    font-size: calc(8px + 2vmin);
+    font-style: italic;
   };
   
   address {

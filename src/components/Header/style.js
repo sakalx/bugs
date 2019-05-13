@@ -19,7 +19,7 @@ export const Title = styled('h1')`
 export const Icon = styled(SvgIcon)`
   height: 20vmin;
   width: 20vmin;
-  
+
   use {
     animation: ${dash} 3s cubic-bezier(.17,.67,1,1.23);
     stroke-dasharray: 1820;

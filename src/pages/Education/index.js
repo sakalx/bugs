@@ -3,33 +3,48 @@ import React from 'react';
 import Header from 'root/components/Header';
 import Link from 'root/components/Link';
 
+import {Education, Content, Icon} from './style';
 
 function EducationPage() {
   return (
       <article role='article' aria-labelledby='described education'>
-        <Header title='Education.'/>
+        <Header title='Education'/>
+
+        <Education>
+          <Icon color='#31338B' id='icon-LPNU'/>
+
+          <Content>
+            <h2>Bachelor’s Degree of Computer Engineering.</h2>
+            <p>
+              <time dateTime='2006-09-01'>September 2006</time>
+              <span> &#8722; </span>
+              <time dateTime='2008-06-01'>June 2008</time>
+            </p>
+            <Link href='http://www.lp.edu.ua/en'>
+              Lviv Polytechnic National University.
+            </Link>
+          </Content>
+        </Education>
+
+        <Education rtl>
+          <Icon color='#50667b' id='icon-GB'/>
+
+          <Content>
+            <h2>Professional Web Developer.</h2>
+            <p>
+              <time dateTime='2016-12-01'>December 2016</time>
+              <span> &#8722; </span>
+              <time dateTime='2017-09-01'>September 2017</time>
+            </p>
+            <Link href='https://geekbrains.ru/professions/web_developer'>
+              GeekBrains – Online University.
+            </Link>
+          </Content>
+        </Education>
+
+        {/*
 
         <p>
-          <span>add icon</span>
-          <Link href={'#'}>
-            Lviv Polytechnic National University
-          </Link>
-        </p>
-          {/*<a href='http://www.lp.edu.ua/en'>
-            Lviv Polytechnic National University - Bachelor’s Degree,
-            Computer Engineering
-          </a>
-          <time dateTime='2017-09-01'>September 2006</time>
-          <time dateTime='2017-06-01'>June 2008</time>
-        </p>
-
-        <p>
-          <span>add icon</span>
-          <a href='https://geekbrains.ru/professions/web_developer'>
-            GeekBrains – Online university - Professional Web developer
-          </a>
-          <time dateTime='2016-12-01'>December 2016</time>
-          <time dateTime='2017-09-01'>September 2017</time>
           <a href='https://geekbrains.ru/certificates/205752.en'>
             certificate: Web Developer
           </a>
