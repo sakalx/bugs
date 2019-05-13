@@ -1,51 +1,6 @@
 import {keyframes} from 'styled-components';
 
-export const revealCube = keyframes`
-  0% {
-    left: 32vw;
-    top: 30vh;
-  } 
-  50% {
-    transform: scale(0);
-  } 
-  100% {
-    left: -21vmin;
-    top: -21vmin;
-    transform: scale(.3);
-  }
-`;
-
-export const fadeIn = keyframes`
-  from {
-    transform: scale(5);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-`;
-
-export const dash = keyframes`
-  0% {
-    fill: rgba(76,76,76, 0);
-    stroke-dashoffset: -1820;
-    stroke: rgba(0,0,0, 1);
-  } 
-  80% {
-    stroke-dashoffset: 10;
-    stroke: rgba(0,0,0, 1);
-  }
-  90% {
-    fill: rgba(76,76,76, 0);
-  }
-  100% {
-    fill: rgba(0,0,0, .5);
-    stroke: rgba(0,0,0, 0);
-  } 
-`;
-
-export const glitch = keyframes`
+export default keyframes`
   0% {
     text-shadow: 0.4389924193300864px 0 1px rgba(77,171,245, .5), -0.4389924193300864px 0 1px rgba(245,0,87, .3), 0 0 3px;
 }

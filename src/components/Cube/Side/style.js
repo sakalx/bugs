@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import {fadeIn} from 'root/theme/keyframes';
+
+import fadeIn from 'root/theme/keyframes/fade-in';
 
 export const Wrap = styled('div')`
   align-items: center;

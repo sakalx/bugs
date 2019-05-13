@@ -1,6 +1,7 @@
 import styled, {css} from 'styled-components';
 
-import {fadeIn} from 'root/theme/keyframes';
+import fadeIn from 'root/theme/keyframes/fade-in';
+
 import SvgIcon from 'root/components/SvgIcon'
 
 const cssBaseline = css`

@@ -1,7 +1,6 @@
 import styled, {css} from 'styled-components';
 
 import SvgIcon from 'root/components/SvgIcon';
-import {dash} from 'root/theme/keyframes';
 
 export const Education = styled('div')`
   align-items: center;
@@ -24,8 +23,4 @@ export const Icon = styled(SvgIcon)`
   height: 15vmin;
   width: 20vmin;
 
-  // use {
-  //   animation: ${dash} 5s cubic-bezier(.17,.67,1,1.23);
-  //   stroke-dasharray: 1820;
-  // }
 `;

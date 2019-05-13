@@ -2,7 +2,7 @@ import React from 'react';
 
 function Link({
                 href,
-                children,
+                title,
               }) {
   return (
       <a
@@ -10,9 +10,9 @@ function Link({
           rel='nofollow'
           role='link'
           target='_blank'
-          title={children}
+          title={title}
       >
-        {children}
+        {title}
       </a>
   );
 }

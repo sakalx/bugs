@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-import {glitch, dash} from 'root/theme/keyframes';
+import glitchText from 'root/theme/keyframes/glitch-text';
+import svgDash from 'root/theme/keyframes/svg-dash';
+
 import SvgIcon from 'root/components/SvgIcon';
 
 export const Wrap = styled('header')`
@@ -9,7 +11,7 @@ export const Wrap = styled('header')`
 `;
 
 export const Title = styled('h1')`
-  animation: ${glitch} 2s cubic-bezier(.32,2,.55,.27) infinite;
+  animation: ${glitchText} 2s cubic-bezier(.32,2,.55,.27) infinite;
   flex: 1;
   margin-left: 20vmin;
   text-align: center;
@@ -21,7 +23,7 @@ export const Icon = styled(SvgIcon)`
   width: 20vmin;
 
   use {
-    animation: ${dash} 3s cubic-bezier(.17,.67,1,1.23);
+    animation: ${svgDash} 3s cubic-bezier(.17,.67,1,1.23);
     stroke-dasharray: 1820;
   }
 `;

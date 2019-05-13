@@ -1,6 +1,7 @@
 import styled, {css} from 'styled-components';
 
-import {revealCube, dash} from 'root/theme/keyframes';
+import revealCube from 'root/theme/keyframes/reveal-cube';
+import svgDash from 'root/theme/keyframes/svg-dash';
 
 import Cube3D from 'react-cube3d-component';
 import SvgIcon from 'root/components/SvgIcon';
@@ -20,7 +21,7 @@ export const Icon = styled(SvgIcon)`
   width: 23vmin;
   
   use {
-    animation: ${dash} 1s cubic-bezier(.17,.67,1,1.23);
+    animation: ${svgDash} 1s cubic-bezier(.17,.67,1,1.23);
     stroke-dasharray: 1820;
   }
 `;

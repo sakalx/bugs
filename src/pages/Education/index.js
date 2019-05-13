@@ -2,6 +2,8 @@ import React from 'react';
 
 import Header from 'root/components/Header';
 import Link from 'root/components/Link';
+import VerticalBar from 'root/components/VerticalBar';
+import HorizontalBar from 'root/components/HorizontalBar';
 
 import {Education, Content, Icon} from './style';
 
@@ -17,12 +19,13 @@ function EducationPage() {
             <h2>Bachelor’s Degree of Computer Engineering.</h2>
             <p>
               <time dateTime='2006-09-01'>September 2006</time>
-              <span> &#8722; </span>
+              <HorizontalBar/>
               <time dateTime='2008-06-01'>June 2008</time>
             </p>
-            <Link href='http://www.lp.edu.ua/en'>
-              Lviv Polytechnic National University.
-            </Link>
+            <Link
+                href='http://www.lp.edu.ua/en'
+                title='Lviv Polytechnic National University.'
+            />
           </Content>
         </Education>
 
@@ -33,31 +36,42 @@ function EducationPage() {
             <h2>Professional Web Developer.</h2>
             <p>
               <time dateTime='2016-12-01'>December 2016</time>
-              <span> &#8722; </span>
+              <HorizontalBar/>
               <time dateTime='2017-09-01'>September 2017</time>
             </p>
-            <Link href='https://geekbrains.ru/professions/web_developer'>
-              GeekBrains – Online University.
-            </Link>
+            <Link
+                href='https://geekbrains.ru/professions/web_developer'
+                title='GeekBrains – Online University.'
+            />
+            <aside data-tooltip='some awesome text!'>
+              <Link
+                  href='https://geekbrains.ru/certificates/205752.en'
+                  title='Web Developer'
+              />
+              <VerticalBar/>
+              <Link
+                  href='https://geekbrains.ru/certificates/253173.en'
+                  title='Web Designer'
+              />
+              <VerticalBar/>
+              <Link
+                  href='https://geekbrains.ru/certificates/294257.en'
+                  title='JavaScript Developer'
+              />
+              <VerticalBar/>
+              <Link
+
+                  href='https://geekbrains.ru/certificates/331214.en'
+                  title='ReactJS Developer'
+              />
+            </aside>
           </Content>
         </Education>
 
         {/*
 
-        <p>
-          <a href='https://geekbrains.ru/certificates/205752.en'>
-            certificate: Web Developer
-          </a>
-          <a href='https://geekbrains.ru/certificates/253173.en'>
-            certificate: Web Designer
-          </a>
-          <a href='https://geekbrains.ru/certificates/294257.en'>
-            certificate: JavaScript developer
-          </a>
-          <a href='https://geekbrains.ru/certificates/331214.en'>
-            certificate: ReactJS developer
-          </a>
-        </p>
+
+
 
         <p>
           <span>add icon</span>

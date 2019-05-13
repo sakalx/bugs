@@ -1,21 +1,16 @@
 import {createGlobalStyle} from 'styled-components';
 
+import colors from './colors';
+import tooltip from './tooltip';
+
 export default createGlobalStyle`
   :root {
-    --background-color: #fff;
-    --background-light-color: #bebebe;
-    
-    --primary-color: #2196f3;
-    --primary-dark-color: #1769aa;
-    --primary-light-color: #4dabf5;
-    --secondary-color: #f50057;
-    --secondary-dark-color: #ab003c;
-    --secondary-light-color: #f73378;
+    ${colors};
   }
+  
   body {
     margin: 0 auto;
     font-family: 'PT Sans', sans-serif;
-    //text-shadow: 4px 4px 4px #aaa;
   };
   
   h1 {
@@ -97,7 +92,5 @@ export default createGlobalStyle`
     font-style: italic;
   };
   
-  address {
-  
-  };
+  ${tooltip};
 `;
