@@ -2,7 +2,7 @@ import {css} from 'styled-components';
 
 export default css`
   --background-color: #fff;
-  --background-dark-color: #666;
+  --background-invert-color: #666;
   --background-light-color: #bebebe;
   --primary-color: #2196f3;
   --primary-dark-color: #1769aa;

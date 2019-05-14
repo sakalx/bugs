@@ -14,8 +14,11 @@ export const Education = styled('div')`
 `;
 
 export const Content = styled('section')`
-  @media (max-width: 650px) {
+  margin-right: 25px;
+  
+  @media (max-width: 580px) {
     flex: 1;
+    margin-right: 0;
   }
 `;
 

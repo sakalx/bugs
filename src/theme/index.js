@@ -88,6 +88,7 @@ export default createGlobalStyle`
   }
   
   time {
+    color: var(--background-invert-color);
     font-size: calc(8px + 2vmin);
     font-style: italic;
   };
