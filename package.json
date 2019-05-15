@@ -27,8 +27,9 @@
   },
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "npm run build-svg && webpack --mode=production",
-    "build-svg": "gulp svg-clean && gulp svg-min && gulp svg-sprite"
+    "build": "webpack --mode=production",
+    "build-svg": "gulp svg-clean && gulp svg-min && gulp svg-sprite",
+    "deploy": "npm run build && gh-pages -d build"
   },
   "keywords": [
     "bugs"

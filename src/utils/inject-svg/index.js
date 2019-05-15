@@ -1,6 +1,10 @@
 export default function() {
+  const VERSION = '0.0.1';
   const CACHE_KEY = 'SVG_SPRITE';
+  const VERSION_KEY = 'SVG_VERSION';
+
   const svgSprite = localStorage.getItem(CACHE_KEY);
+  const svgVersion = localStorage.getItem(VERSION_KEY);
 
   const insertSVG = svg => {
     const container = document.createElement('div');
@@ -9,7 +13,7 @@ export default function() {
     document.body.appendChild(container);
   };
 
-  if (svgSprite) {
+  if (svgVersion === VERSION && svgSprite) {
     insertSVG(svgSprite);
   } else {
     (async () => {
@@ -18,6 +22,7 @@ export default function() {
 
       insertSVG(svgSprite);
       localStorage.setItem(CACHE_KEY, svgSprite);
+      localStorage.setItem(VERSION_KEY, VERSION);
     })();
   }
 }
