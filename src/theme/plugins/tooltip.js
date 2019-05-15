@@ -3,7 +3,8 @@ import {css} from 'styled-components';
 export default css`
   [data-tooltip] {
     position: relative;
-  };
+  }
+  
   [data-tooltip]:before {
     background-color: var(--background-invert-color);
     border-radius: 4px;
@@ -19,9 +20,10 @@ export default css`
     transition: all .5s cubic-bezier(.32,2,.55,.27);
     transition-property: transform, bottom;
     z-index: 9999;
-  };
+  }
+  
   [data-tooltip]:hover:before {
     bottom: 100%;
     transform: scale(1);
-  };
+  }
 `;

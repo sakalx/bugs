@@ -1,20 +1,29 @@
 import React from 'react';
 
 import Header from 'root/components/Header';
+import TimeRange from 'root/components/TimeRange';
+
+import {Company} from './style';
 
 function ExperiencePage() {
   return (
       <article role='article' aria-labelledby='list of work experience'>
         <Header title='Experience.'/>
 
-        <p>
+        <Company>
           <span>add icon</span>
-          <strong>mPoint Media, Inc.</strong>
-          <address>New York, NY</address>
 
-          <time dateTime='2018-05-01'>May 2018</time>
-          <time dateTime={new Date()}>Present</time>
-          <strong>Junior Front-end Engineering</strong>
+          <section>
+            <h2>mPoint Media, Inc.</h2>
+            <address>New York, NY</address>
+            <TimeRange
+                start={{dateTime: '2018-05-01', title: 'May 2018'}}
+                end={{dateTime: new Date(), title: 'Present'}}
+            />
+
+
+
+            <h4>Junior Front-end Engineering.</h4>
 
           <ul>
             <li>
@@ -44,9 +53,12 @@ function ExperiencePage() {
               tight deadlines.
             </li>
           </ul>
-        </p>
 
-        <p>
+
+          </section>
+        </Company>
+
+        {/*   <p>
           <span>add icon</span>
           <strong>Hearts and Minds Network, Inc.</strong>
           <address>New York, NY</address>
@@ -145,7 +157,7 @@ function ExperiencePage() {
               problems.
             </li>
           </ul>
-        </p>
+        </p>*/}
       </article>
   );
 }

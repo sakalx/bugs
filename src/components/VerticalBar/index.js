@@ -4,7 +4,7 @@ function VerticalBar({style}) {
   return (
       <span style={{
         color: 'var(--background-invert-color)',
-        fontSize: '2em',
+        fontSize: '1.5em',
         margin: '0 4px',
         ...style,
       }}>

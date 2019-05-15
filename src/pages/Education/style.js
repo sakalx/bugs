@@ -25,5 +25,4 @@ export const Content = styled('section')`
 export const Icon = styled(SvgIcon)`
   height: 15vmin;
   width: 20vmin;
-
 `;

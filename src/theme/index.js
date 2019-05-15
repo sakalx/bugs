@@ -1,16 +1,30 @@
 import {createGlobalStyle} from 'styled-components';
 
 import colors from './colors';
-import tooltip from './tooltip';
+import {tooltip} from './plugins';
+import {a, p, ul_li} from './tags';
 
 export default createGlobalStyle`
   :root {
     ${colors};
   }
   
+  // Custom tags:
+  ${a};
+  ${p};
+  ${ul_li};
+  
+  // Data plugins:
+  ${tooltip};
+  
+  // Css normalize:
   body {
     margin: 0 auto;
     font-family: 'PT Sans', sans-serif;
+  };
+  
+   div {
+    box-sizing: border-box;
   };
   
   h1 {
@@ -19,6 +33,7 @@ export default createGlobalStyle`
   
   h2 {
     font-size: calc(14px + 2vmin);
+    margin-bottom: 8px;
     text-shadow: 4px 4px 4px var(--background-light-color);
   }
   
@@ -27,60 +42,9 @@ export default createGlobalStyle`
     text-shadow: 4px 4px 4px var(--background-light-color);
   };
   
-  div {
-    box-sizing: border-box;
-  };
-  
-  p {
-    font-size: calc(10px + 2vmin);
-  }
-    
-  p:first-letter {
-    float: left;
-    font-family: 'Akronim', cursive;
-    font-size: calc(50px + 2vmin);
-    font-weight: normal;
-    line-height: calc(30px + 2vmin);
-    padding-left: 3px;
-    padding-right: 8px;
-    padding-top: 4px;
-    text-shadow: 4px 4px 4px var(--background-light-color);
-  }
-  
-  p:hover:first-letter {
-    color: var(--primary-dark-color);
-  }
-
-  li {
-    list-style-type: none;
-  };
-  
-  a {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(to right, var(--secondary-color), var(--secondary-color) 50%, var(--primary-color) 50%);
-    background-position: 100%;
-    background-size: 200% 100%;
-    font-size: calc(10px + 2vmin);
-    position: relative;
-    text-decoration: none;
-    transition: background-position 1s cubic-bezier(.32,2,.55,.27);
-  };
-  
-  a:after{
-    background: var(--secondary-color);
-    bottom: 0;
-    content: '';
-    height: 1px;
-    position: absolute;
-    right: 0;
-    transition: width 1s cubic-bezier(.32,2,.55,.27);
-    width: 0;
-  }
-  
-  a:visited,a:hover,a:active, a:hover:after {
-    background-position: 0;
-    width: 100%;
+  h4 {
+    font-size: calc(8px + 2vmin);
+    margin: 8px auto;
   }
   
   svg {
@@ -92,6 +56,4 @@ export default createGlobalStyle`
     font-size: calc(8px + 2vmin);
     font-style: italic;
   };
-  
-  ${tooltip};
 `;

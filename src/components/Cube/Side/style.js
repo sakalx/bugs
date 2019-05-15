@@ -11,10 +11,12 @@ export const Wrap = styled('div')`
   flex-direction: column;
   height: 100%;
   justify-content: center;
-  transition: transform .3s ease;
+  transition: all .3s ease;
+  transition-property: opacity, transform;
   user-select: none;
   
   :hover {
+    opacity: .97;
     transform: rotate(360deg);
   }
 `;
