@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import SvgIcon from 'root/components/SvgIcon';
 
-export const Company = styled('section')`
+export const Company = styled('header')`
   align-items: center;
   display: flex;
   flex-wrap: wrap;

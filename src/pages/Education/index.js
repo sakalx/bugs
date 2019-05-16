@@ -9,7 +9,7 @@ import {Education, Content, Icon} from './style';
 
 function EducationPage() {
   return (
-      <article role='article' aria-labelledby='described education'>
+      <article>
         <Header title='Education'/>
 
         <Education>

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import fadeIn from 'root/theme/keyframes/fade-in';
 
-export const Wrap = styled('div')`
+export const Wrap = styled('section')`
   align-items: center;
   background-color: var(--background-color);
   border-radius: 8px;
@@ -11,12 +11,10 @@ export const Wrap = styled('div')`
   flex-direction: column;
   height: 100%;
   justify-content: center;
-  transition: all .3s ease;
-  transition-property: opacity, transform;
+  transition: transform .3s ease;
   user-select: none;
   
   :hover {
-    opacity: .97;
     transform: rotate(360deg);
   }
 `;

@@ -7,7 +7,6 @@ import Cube3D from 'react-cube3d-component';
 import SvgIcon from 'root/components/SvgIcon';
 
 export const Cube = styled(Cube3D)`
-  cursor: pointer;
   position: absolute;
   z-index: 3000;
   

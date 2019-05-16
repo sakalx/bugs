@@ -13,6 +13,7 @@ export default css`
     margin:0; 
     padding: 8px;
     position: relative;
+    text-align: center;
   }
   
   li:after {

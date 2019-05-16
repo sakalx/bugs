@@ -7,7 +7,7 @@ import {Company, Info, Icon} from './style';
 
 function ExperiencePage() {
   return (
-      <article role='article' aria-labelledby='list of work experience'>
+      <article>
         <Header title='Experience.'/>
 
         <div>

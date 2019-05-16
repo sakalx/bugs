@@ -19,8 +19,9 @@ export default createGlobalStyle`
   
   // Css normalize:
   body {
-    margin: 0 auto;
     font-family: 'PT Sans', sans-serif;
+    margin: 0 auto;
+    overscroll-behavior-y: contain;
   };
   
    div {

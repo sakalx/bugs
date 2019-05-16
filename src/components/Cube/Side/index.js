@@ -20,33 +20,23 @@ function Side({
 
   const handleMouseUp = ({target}) => {
     if (!isClick) return;
-    const sideIndex = target.attributes['aria-labelledby'].value;
 
     (page.active)
         ? showPage(null)
-        : showPage(sideIndex);
+        : showPage(target.dataset.page);
 
     isClick = false;
   };
 
   return (
       <Wrap
-          aria-labelledby={label}
-          component='section'
-          elevation={12}
+          style={{ outline: 'none'}}
+          data-page={label}
           onMouseDown={handleMouseDown}
           onMouseUp={handleMouseUp}
-          onTouchStart={e => handleMouseDown(e.changedTouches[0])}
-          role='button'
-          square
+          onTouchStart={handleMouseDown}
       >
-        <Title
-            role='heading'
-            variant='h6'
-            gutterBottom
-        >
-          {label}
-        </Title>
+        <Title>{label}</Title>
         {children}
       </Wrap>
   );
