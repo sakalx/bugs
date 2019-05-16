@@ -38,6 +38,7 @@ export default css`
     border-top-right-radius: 21px; 
     right: 0;
   }
+  
   li::before {
     background-color: var(--background-light-color);
     border-radius: 50%;
@@ -64,6 +65,7 @@ export default css`
   
   li:last-child:after  {
     border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     border-bottom: none;
   }
 `;

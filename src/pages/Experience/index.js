@@ -3,37 +3,40 @@ import React from 'react';
 import Header from 'root/components/Header';
 import TimeRange from 'root/components/TimeRange';
 
-import {Company} from './style';
+import {Company, Info, Icon} from './style';
 
 function ExperiencePage() {
   return (
       <article role='article' aria-labelledby='list of work experience'>
         <Header title='Experience.'/>
 
-        <Company>
-          <span>add icon</span>
-
-          <section>
+        <div>
+          <Company>
+            <Icon color='#c8282d' id='icon-MPoint'/>
             <h2>mPoint Media, Inc.</h2>
-            <address>New York, NY</address>
-            <TimeRange
-                start={{dateTime: '2018-05-01', title: 'May 2018'}}
-                end={{dateTime: new Date(), title: 'Present'}}
-            />
-
-
-
+            <Info>
+              <address>New York, NY</address>
+              <TimeRange
+                  start={{dateTime: '2018-05-01', title: 'May 2018'}}
+                  end={{dateTime: new Date(), title: 'Present'}}
+              />
+            </Info>
             <h4>Junior Front-end Engineering.</h4>
-
+          </Company>
           <ul>
             <li>
               Developing fully functional responsive prototypes based on
               Business Requirements using HTML5, CSS3, JavaScript and React.
+              Optimizing components for maximum performance across a vast
+              array
+              of web-capable devices and browsers.
             </li>
             <li>
-              Review designs to ensure technical feasibility while scrutinizing
+              Review designs to ensure technical feasibility while
+              scrutinizing
               validity of all user input before submitting to back-end, and
-              generating reusable components and front-end libraries for future
+              generating reusable components and front-end libraries for
+              future
               utilization.
             </li>
             <li>
@@ -43,30 +46,29 @@ function ExperiencePage() {
               management and version control.
             </li>
             <li>
-              Optimizing components for maximum performance across a vast array
-              of web-capable devices and browsers.
-            </li>
-            <li>
               Build and maintain strong relationships with other team members
               and stakeholders, coordinate with web designers to match visual
               design requirements, and deliver high-quality projects within
               tight deadlines.
             </li>
           </ul>
+        </div>
 
+        <hr/>
 
-          </section>
-        </Company>
-
-        {/*   <p>
-          <span>add icon</span>
-          <strong>Hearts and Minds Network, Inc.</strong>
-          <address>New York, NY</address>
-
-          <time dateTime='2018-02-01'>February 2018</time>
-          <time dateTime='2018-05-01'>May 2018</time>
-          <strong>Web Developer Volunteer</strong>
-
+        <div>
+          <Company>
+            <Icon id='icon-HeartsMinds'/>
+            <h2>Hearts And Minds, Inc.</h2>
+            <Info>
+              <address>New York, NY</address>
+              <TimeRange
+                  start={{dateTime: '2018-02-01', title: 'February 2018'}}
+                  end={{dateTime: '2018-05-01', title: 'May 2018'}}
+              />
+            </Info>
+            <h4>Web Developer Volunteer.</h4>
+          </Company>
           <ul>
             <li>
               Implemented functions for custom scrolling, used vanilla
@@ -81,18 +83,26 @@ function ExperiencePage() {
             <li>
               Crafted various website features using HTML5 CSS3 and JavaScript.
             </li>
+            <li>
+              Customizing WordPress theme, adding new features.
+            </li>
           </ul>
-        </p>
+        </div>
 
-        <p>
-          <span>add icon</span>
-          <strong>Self-Employed, Interactive Web Design, Development</strong>
-          <address>New York, NY</address>
+        <hr/>
 
-          <time dateTime='2017-02-01'>February 2017</time>
-          <time dateTime='2018-01-01'>January 2018</time>
-          <strong>Front-end Developer</strong>
-
+        <div>
+          <Company>
+            <h2>Self-Employed.</h2>
+            <Info>
+              <address>New York, NY</address>
+              <TimeRange
+                  start={{dateTime: '2017-02-01', title: 'February 2017'}}
+                  end={{dateTime: '2018-01-01', title: 'January 2018'}}
+              />
+            </Info>
+            <h4>Front-end Developer.</h4>
+          </Company>
           <ul>
             <li>
               Skillfully built responsive HTML pages from wireframes,
@@ -117,17 +127,22 @@ function ExperiencePage() {
               marketing services, and front-end engineering projects.
             </li>
           </ul>
-        </p>
+        </div>
 
-        <p>
-          <span>add icon</span>
-          <strong>ТехноХвиля</strong>
-          <address>Kalush, Ivano-Frankivsk, Ukraine</address>
+        <hr/>
 
-          <time dateTime='2008-08-01'>August 2008</time>
-          <time dateTime='2016-01-01'>January 2016</time>
-          <strong>Senior Windows System Administrator</strong>
-
+        <div>
+          <Company>
+            <h2>ТехноХвиля.</h2>
+            <Info>
+              <address>Kalush, Ivano-Frankivsk, Ukraine</address>
+              <TimeRange
+                  start={{dateTime: '2008-08-01', title: 'August 2008'}}
+                  end={{dateTime: '2016-01-01', title: 'January 2016'}}
+              />
+            </Info>
+            <h4>Senior Windows System Administrator.</h4>
+          </Company>
           <ul>
             <li>
               Resolve issues related to Windows, application, virus isolation,
@@ -157,7 +172,7 @@ function ExperiencePage() {
               problems.
             </li>
           </ul>
-        </p>*/}
+        </div>
       </article>
   );
 }

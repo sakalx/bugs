@@ -1,5 +1,5 @@
 export default function() {
-  const VERSION = '0.0.1';
+  const VERSION = '0.0.2';
   const CACHE_KEY = 'SVG_SPRITE';
   const VERSION_KEY = 'SVG_VERSION';
 

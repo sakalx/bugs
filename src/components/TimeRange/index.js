@@ -1,13 +1,16 @@
 import React from 'react';
-import HorizontalBar from 'root/components/HorizontalBar';
+
+import {Wrap} from './style';
 
 function TimeRange({start, end}) {
   return (
-      <div style={{marginBottom: '4px'}}>
+      <Wrap>
         <time dateTime={start.dateTime}>{start.title}</time>
-        <HorizontalBar style={{color: 'var(--background-invert-color)'}}/>
+        <span style={{margin: '0 4px', color: 'var(--background-invert-color)'}}>
+          -
+        </span>
         <time dateTime={end.dateTime}>{end.title}</time>
-      </div>
+      </Wrap>
   );
 }
 

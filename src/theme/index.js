@@ -44,7 +44,7 @@ export default createGlobalStyle`
   
   h4 {
     font-size: calc(8px + 2vmin);
-    margin: 8px auto;
+    margin: 8px 0;
   }
   
   svg {
@@ -56,4 +56,11 @@ export default createGlobalStyle`
     font-size: calc(8px + 2vmin);
     font-style: italic;
   };
+  
+  hr {
+    border: 0;
+    box-shadow: 0 0 10px 1px black;
+    height: 0;
+    margin: 21px 0;
+  }
 `;
