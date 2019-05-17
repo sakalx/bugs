@@ -2,12 +2,7 @@ import React from 'react';
 
 import Header from 'root/components/Header';
 
-import {
-  Icon,
-  List,
-  Title,
-  Wrap,
-} from './style';
+import {Icon, Title, Wrap} from './style';
 
 function SkillsPage() {
   return (
@@ -15,12 +10,12 @@ function SkillsPage() {
         <Header title='Skills.'/>
 
         <Wrap>
-          <div>
+          <section>
             <Title>
-              <h2>Industry Knowledge.</h2>
+              <h2>Industry Knowledge</h2>
               <Icon id='icon-Industry'/>
             </Title>
-            <List>
+            <ul>
               <li>Algorithms</li>
               <li>Data Structures</li>
               <li>Functional Programming</li>
@@ -33,15 +28,15 @@ function SkillsPage() {
               <li>UI/UX</li>
               <li>User Acceptance Testing</li>
               <li>Wireframing</li>
-            </List>
-          </div>
+            </ul>
+          </section>
 
-          <div>
+          <section>
             <Title>
-              <h2>Tools & Technologies.</h2>
+              <h2>Tools & Technologies</h2>
               <Icon id='icon-Technologies'/>
             </Title>
-            <List>
+            <ul>
               <li>AJAX</li>
               <li>BEM</li>
               <li>CSS/CSS3</li>
@@ -60,15 +55,15 @@ function SkillsPage() {
               <li>Webpack</li>
               <li>WebSocket</li>
               <li>WordPress</li>
-            </List>
-          </div>
+            </ul>
+          </section>
 
-          <div>
+          <section>
             <Title>
-              <h2>Interpersonal Skills.</h2>
+              <h2>Interpersonal Skills</h2>
               <Icon id='icon-Interpersonal'/>
             </Title>
-            <List>
+            <ul>
               <li>Active Listening</li>
               <li>Analytical Skills</li>
               <li>Critical Thinking</li>
@@ -77,9 +72,8 @@ function SkillsPage() {
               <li>Patience</li>
               <li>Problem Solving</li>
               <li>Teamwork</li>
-            </List>
-          </div>
-
+            </ul>
+          </section>
         </Wrap>
       </article>
   );

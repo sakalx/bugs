@@ -2,19 +2,15 @@ import styled from 'styled-components';
 
 import SvgIcon from 'root/components/SvgIcon';
 
-export const Wrap = styled('section')`
+export const Wrap = styled('div')`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
 `;
 
 export const Title = styled('header')`
   align-items: center;
   display: flex;
-`;
-
-export const List = styled('ul')`
- 
 `;
 
 export const Icon = styled(SvgIcon)`

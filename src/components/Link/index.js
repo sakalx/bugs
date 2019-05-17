@@ -1,9 +1,6 @@
 import React from 'react';
 
-function Link({
-                href,
-                title,
-              }) {
+function Link({href, title}) {
   return (
       <a
           href={href}
