@@ -24,7 +24,11 @@ export default css`
     width: 0;
   }
   
-  a:visited,a:hover,a:active, a:hover:after {
+  a:visited, a:active, a:hover {
+    background-position: 0;
+  } 
+  
+   a:visited:after, a:active:after, a:hover:after {
     background-position: 0;
     width: 100%;
   }

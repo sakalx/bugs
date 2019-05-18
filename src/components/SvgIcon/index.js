@@ -1,7 +1,6 @@
 import React from 'react';
 
 function SvgIcon({
-                   ariaLabelledby = 'icon',
                    color = '#000',
                    id,
                    ...rest

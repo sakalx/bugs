@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Link({href, title}) {
+function Link({href, title, children, ...rest}) {
   return (
       <a
           href={href}
@@ -8,8 +8,9 @@ function Link({href, title}) {
           role='link'
           target='_blank'
           title={title}
+          {...rest}
       >
-        {title}
+        {children ? children : title}
       </a>
   );
 }

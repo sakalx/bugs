@@ -12,7 +12,7 @@ export default css`
     color: var(--text-invert-color);
     content: attr(data-tooltip);
     font-size: 12px;
-    left: 30%;
+    left: 0%;
     letter-spacing: 1.5px;
     padding: 2px 6px;
     position: absolute;

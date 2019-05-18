@@ -1,18 +1,31 @@
 import React from 'react';
 
 import Header from 'root/components/Header';
+import Link from 'root/components/Link';
+
+import {CodeLink, Icon, Item, WrapLink} from './style';
+
+const CodeSourceLink = ({href}) =>
+    <WrapLink data-tooltip='source'>
+      <CodeLink href={href} title='GitHub source code'>
+        <Icon color='var(--primary-color)' id='icon-Github'/>
+      </CodeLink>
+    </WrapLink>;
 
 function AccomplishmentsPage() {
   return (
-      <article role='article' aria-labelledby='list of accomplishments'>
+      <article>
         <Header title='Accomplishments.'/>
+        <hr/>
         <ul>
-          <li>
-            <strong>
-              <a href='https://chrome.google.com/webstore/detail/hammer-for-smashing-page/gicbggcmjgdbiclnfcmiapnfeanljnmo'>
-                Chrome Extension browser.
-              </a>
-            </strong>
+          <Item>
+            <WrapLink>
+              <Link
+                  href='https://chrome.google.com/webstore/detail/hammer-for-smashing-page/gicbggcmjgdbiclnfcmiapnfeanljnmo'
+                  title='Chrome Extension.'
+              />
+              <CodeSourceLink href='https://github.com/sakalx/hammer'/>
+            </WrapLink>
             <p>
               This extension for chrome gives you a quick, easy and satisfying
               way to remove unnecessary elements and get a clean and pretty page
@@ -20,61 +33,76 @@ function AccomplishmentsPage() {
               This can be helpful for people who don't like sticky headers on
               page and others ugly elements that make difficult to read page.
             </p>
+          </Item>
 
-          </li>
+          <Item>
+            <WrapLink>
+              <Link
+                  href='https://patterns-js.firebaseapp.com'
+                  title='PWA, JavaScript patterns.'
+              />
+              <CodeSourceLink
+                  href='https://github.com/sakalx/javascript-patterns'/>
+            </WrapLink>
 
-          <li>
-            <strong>
-              <a href='https://patterns-js.firebaseapp.com'>
-                JavaScript patterns collection.
-              </a>
-            </strong>
             <p>
               A JavaScript pattern and antipattern collection that covers
               function
               patterns, design patterns, general patterns, literals and
               constructor patterns, object creation patterns, code reuse
-              patterns.
+              patterns. Webpack for handling build process.
             </p>
-          </li>
+          </Item>
 
-          <li>
-            <strong>
-              <a href='https://sunny-box.firebaseapp.com'>
-                Online radio.
-              </a>
-            </strong>
+          <Item>
+            <WrapLink>
+              <Link
+                  href='https://sunny-box.firebaseapp.com'
+                  title='Online radio WebApp.'
+              />
+              <CodeSourceLink href='https://github.com/sakalx/sunny-box'/>
+            </WrapLink>
             <p>
               Serverless application, world online radio, designed based on
               Material design,
               with React UI
-              library and for manage state of App used Redux.
+              library, manage state handled by Redux, CSS in Js handled by
+              Styled-Components, DB and host handle
+              via Firebase, Webpack for handling build process.
             </p>
-          </li>
-
-          <li>
-            <strong>
-              <a href='https://sakals.000webhostapp.com/landing.page/index.html'>
-                Landing Page.
-              </a>
-            </strong>
+          </Item>
+          <Item>
+            <WrapLink>
+              <Link
+                  href='https://sakals.000webhostapp.com/landing.page/index.html'
+                  title='Landing Page.'
+              />
+              <CodeSourceLink
+                  href='https://github.com/sakalx/work-space.gulp/tree/master/projects/Landing/src.landing-page'/>
+            </WrapLink>
             <p>
-              Responsive landing page template, only pure JS/HTML/CSS.
+              Responsive landing page template, only pure JS/HTML/CSS.<br/>
+              Optimization and lazy load image, CSS styling designed on
+              BEM methodology, Gulp for handling build process.
             </p>
-          </li>
-
-          <li>
-            <strong>
-              <a href='https://sakals.000webhostapp.com/fooseshoes.page/index.html'>
-                Pixel Perfect Page
-              </a>
-            </strong>
+          </Item>
+          <Item>
+            <WrapLink>
+              <Link
+                  href='https://sakals.000webhostapp.com/fooseshoes.page/index.html'
+                  title='Pixel Perfect Page.'
+              />
+              <CodeSourceLink
+                  href='https://github.com/sakalx/work-space.gulp/tree/master/projects/Foose-Shoes/src.commercial-page'/>
+            </WrapLink>
             <p>
-              Responsive pixel perfect page.
+              Responsive pixel perfect page, web pages that automatically scale
+              appropriately depending on the size, and orientation, of
+              the screen.
             </p>
-          </li>
+          </Item>
 
-          <li>
+          <Item>
             <strong>
               <a href='https://www.npmjs.com/package/encryption-gulp'>
                 npm, Gulp encryption package.
@@ -84,9 +112,9 @@ function AccomplishmentsPage() {
               Encryption and decryption files, folders or whole project via
               Gulp, base on crypto module from Node.js .
             </p>
-          </li>
+          </Item>
 
-          <li>
+          <Item>
             <strong>
               <a href='https://expo.io/@sakal/cards'>
                 Mobile Game "Challenge".
@@ -99,9 +127,9 @@ function AccomplishmentsPage() {
               and organize collections of flashcards. Leveraged React Native to
               manage infinite lists, routing, and user input.
             </p>
-          </li>
+          </Item>
 
-          <li>
+          <Item>
             <strong>
               <a href='https://www.npmjs.com/package/react-glitch-effect'>
                 npm, React glitch-effect-component.
@@ -117,9 +145,9 @@ function AccomplishmentsPage() {
               clip-path property also use CSS variables for setting some
               properties that will allow for an easy adjustment of the effect.
             </p>
-          </li>
+          </Item>
 
-          <li>
+          <Item>
             <strong>
               <a href='https://www.npmjs.com/package/react-input-ui'>
                 npm, React Input UI Collection.
@@ -136,9 +164,9 @@ function AccomplishmentsPage() {
               resembling its paper counterpart but in the digital world we can
               be more creative.
             </p>
-          </li>
+          </Item>
 
-          <li>
+          <Item>
             <strong>
               <a href='https://www.npmjs.com/package/redux-socket-auth-middleware'>
                 npm, Redux middleware for handle socket.io authentication.
@@ -154,11 +182,13 @@ function AccomplishmentsPage() {
               action to a separate a pending action and a separate
               connected/rejected/disconnected action.
             </p>
-          </li>
+          </Item>
         </ul>
 
         <section>
           <header>
+            <Icon id='icon-Language'/>
+
             <h3>Languages</h3>
             <h4>
               <strong>Ukrainian</strong>
