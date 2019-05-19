@@ -7,7 +7,7 @@ import {Icon, Title, Wrap} from './style';
 function SkillsPage() {
   return (
       <article>
-        <Header title='Skills.'/>
+        <Header title='Skills'/>
 
         <Wrap>
           <section>

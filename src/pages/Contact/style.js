@@ -14,8 +14,11 @@ export const WrapTitle = styled('header')`
   margin-bottom: 8px;
 `;
 
-export const Title = styled('h2')`
-  margin: 0;
+export const Content = styled('section')`
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 185px;
+  margin: 16px;
 `;
 
 export const Icon = styled(SvgIcon)`

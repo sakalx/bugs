@@ -3,49 +3,45 @@ import React from 'react';
 import Header from 'root/components/Header';
 import Link from 'root/components/Link';
 
-import {Icon, Title, Wrap, WrapTitle} from './style';
+import {Content, Icon, Wrap, WrapTitle} from './style';
 
 function ContactPage() {
   return (
       <section>
-        <Header title='Contact.'/>
+        <Header title='Contact'/>
 
         <Wrap>
-          <section>
+          <Content>
             <WrapTitle>
               <Icon color='#8c6ab6' id='icon-Email'/>
-              <Title>Email</Title>
+              <h2 style={{margin: 0}}>Email</h2>
             </WrapTitle>
-            <hr/>
             <Link
                 href='mailto:serhii.sakal@gmail.com'
                 title='serhii.sakal@gmail.com'
             />
-            <hr/>
             <Link
                 href='mailto:sakal.s@hotmail.com'
                 title='sakal.s@hotmail.com'
             />
-            <hr/>
             <Link
                 href='mailto:sakals@mail.ua'
                 title='sakals@mail.ua'
             />
-          </section>
+          </Content>
 
-          <section>
+          <Content>
             <WrapTitle>
               <Icon color='#039688' id='icon-Phone'/>
-              <Title>Phone</Title>
+              <h2 style={{margin: 0}}>Phone</h2>
             </WrapTitle>
-            <hr/>
             <Link
                 href='tel:1-929-238-3363'
                 title='1-929-238-3363'
             />
-          </section>
+          </Content>
 
-          <section>
+          <Content>
             <WrapTitle>
               <Icon id='icon-Linkedin'/>
               <Link
@@ -53,7 +49,6 @@ function ContactPage() {
                   title='LinkedIn'
               />
             </WrapTitle>
-            <hr/>
             <WrapTitle>
               <Icon color='#7f7f7f' id='icon-Github'/>
               <Link
@@ -61,7 +56,7 @@ function ContactPage() {
                   title='GitHub'
               />
             </WrapTitle>
-          </section>
+          </Content>
 
         </Wrap>
       </section>

@@ -24,8 +24,7 @@ const CodeSourceLink = ({href}) =>
 function AccomplishmentsPage() {
   return (
       <article>
-        <Header title='Accomplishments.'/>
-        <hr/>
+        <Header title='Achievements'/>
 
         <ul>
           <Item>

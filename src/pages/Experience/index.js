@@ -8,7 +8,7 @@ import {Company, Info, Icon} from './style';
 function ExperiencePage() {
   return (
       <article>
-        <Header title='Experience.'/>
+        <Header title='Experience'/>
 
         <div>
           <Company>
