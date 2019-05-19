@@ -40,6 +40,7 @@ export default createGlobalStyle`
   
   h3 {
     font-size: calc(12px + 2vmin);
+    margin: 12px 0;
     text-shadow: 4px 4px 4px var(--background-light-color);
   };
   

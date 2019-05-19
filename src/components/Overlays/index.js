@@ -34,15 +34,14 @@ function Overlays({page}) {
 
   return (
       <OverlayEffect
-          mainFon='#fff'
-          secondaryFon='#ce8fff'
-          aria-labelledby='overlay'
-          direction={'bottom-right'}
+          direction='bottom-right'
           id='overlay-viewport'
           isOpen={!!page.active}
+          mainFon='#fff'
+          secondaryFon='#ce8fff'
           style={{position: 'relative'}}
       >
-        <WrapContent role='dialog'>
+        <WrapContent>
           {renderContent()}
         </WrapContent>
         <MouseTrail/>

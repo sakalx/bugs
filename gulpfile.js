@@ -28,7 +28,7 @@ gulp.task('svg-sprite', () => gulp.src('minified/*.svg', {cwd: developSVG}).
         spacing: {padding: 1},
       },
       mode: {
-        view: false,
+        view: true,
         symbol: true,
       },
     })).

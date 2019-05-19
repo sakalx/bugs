@@ -3,7 +3,16 @@ import React from 'react';
 import Header from 'root/components/Header';
 import Link from 'root/components/Link';
 
-import {CodeLink, Icon, Item, WrapLink} from './style';
+import {
+  CodeLink,
+  Icon,
+  Item,
+  ItemLang,
+  Languages,
+  NpmIcon,
+  TitleLang,
+  WrapLink,
+} from './style';
 
 const CodeSourceLink = ({href}) =>
     <WrapLink data-tooltip='source'>
@@ -17,6 +26,7 @@ function AccomplishmentsPage() {
       <article>
         <Header title='Accomplishments.'/>
         <hr/>
+
         <ul>
           <Item>
             <WrapLink>
@@ -71,6 +81,7 @@ function AccomplishmentsPage() {
               via Firebase, Webpack for handling build process.
             </p>
           </Item>
+
           <Item>
             <WrapLink>
               <Link
@@ -86,6 +97,7 @@ function AccomplishmentsPage() {
               BEM methodology, Gulp for handling build process.
             </p>
           </Item>
+
           <Item>
             <WrapLink>
               <Link
@@ -96,18 +108,24 @@ function AccomplishmentsPage() {
                   href='https://github.com/sakalx/work-space.gulp/tree/master/projects/Foose-Shoes/src.commercial-page'/>
             </WrapLink>
             <p>
-              Responsive pixel perfect page, web pages that automatically scale
+              Responsive pixel perfect page, web page that automatically scale
               appropriately depending on the size, and orientation, of
               the screen.
             </p>
           </Item>
 
           <Item>
-            <strong>
-              <a href='https://www.npmjs.com/package/encryption-gulp'>
-                npm, Gulp encryption package.
-              </a>
-            </strong>
+            <WrapLink>
+              <Link
+                  href='https://www.npmjs.com/package/encryption-gulp'
+                  title='Gulp encryption package.'
+              >
+                <NpmIcon color='#cc3534' id='icon-NPM'/>
+                Gulp encryption package.
+              </Link>
+              <CodeSourceLink
+                  href='https://github.com/sakalx/encrypt'/>
+            </WrapLink>
             <p>
               Encryption and decryption files, folders or whole project via
               Gulp, base on crypto module from Node.js .
@@ -115,12 +133,14 @@ function AccomplishmentsPage() {
           </Item>
 
           <Item>
-            <strong>
-              <a href='https://expo.io/@sakal/cards'>
-                Mobile Game "Challenge".
-              </a>
-            </strong>
-
+            <WrapLink>
+              <Link
+                  href='https://expo.io/@sakal/cards'
+                  title='Mobile App "Challenge".'
+              />
+              <CodeSourceLink
+                  href='https://github.com/sakalx/quiz-cards'/>
+            </WrapLink>
             <p>
               Mobile App for training your memory, developed a cross-platform
               (iOS and Android) mobile application that allows users to create
@@ -130,32 +150,42 @@ function AccomplishmentsPage() {
           </Item>
 
           <Item>
-            <strong>
-              <a href='https://www.npmjs.com/package/react-glitch-effect'>
-                npm, React glitch-effect-component.
-              </a>
-            </strong>
-            <a href='https://www.npmjs.com/package/react-glitch-effect'>
-              DEMO page.
-            </a>
+            <WrapLink>
+              <Link
+                  href='https://www.npmjs.com/package/react-glitch-effect'
+                  title='React glitch-effect-component.'
+              >
+                <NpmIcon color='#cc3534' id='icon-NPM'/>
+                React glitch-effect component.
+              </Link>
+              <CodeSourceLink
+                  href='https://github.com/sakalx/react-glitch-effect/tree/master'/>
+            </WrapLink>
             <p>
               React component, that makes glitch effects.
-
               An experimental glitch effect powered by CSS animations and the
               clip-path property also use CSS variables for setting some
               properties that will allow for an easy adjustment of the effect.
+              <Link
+                  style={{fontSize: 16}}
+                  href='https://sakalx.github.io/react-glitch-effect/'
+                  title=' DEMO'
+              />
             </p>
           </Item>
 
           <Item>
-            <strong>
-              <a href='https://www.npmjs.com/package/react-input-ui'>
-                npm, React Input UI Collection.
-              </a>
-            </strong>
-            <a href='https://sakalx.github.io/react-input-collection/'>
-              DEMO page.
-            </a>
+            <WrapLink>
+              <Link
+                  href='https://www.npmjs.com/package/react-input-ui'
+                  title='React Input UI Collection.'
+              >
+                <NpmIcon color='#cc3534' id='icon-NPM'/>
+                React Input UI Collection.
+              </Link>
+              <CodeSourceLink
+                  href='https://github.com/sakalx/react-input-collection'/>
+            </WrapLink>
             <p>
               Form inputs offer a great opportunity to add some subtle and
               interesting effects to a web page. They are elements that your
@@ -163,47 +193,65 @@ function AccomplishmentsPage() {
               can enhance the experience. We are used to the default form
               resembling its paper counterpart but in the digital world we can
               be more creative.
+              <Link
+                  style={{fontSize: 16}}
+                  href='https://sakalx.github.io/react-input-collection/'
+                  title=' DEMO'
+              />
             </p>
           </Item>
 
           <Item>
-            <strong>
-              <a href='https://www.npmjs.com/package/redux-socket-auth-middleware'>
-                npm, Redux middleware for handle socket.io authentication.
-              </a>
-            </strong>
-            <a href='https://socketio-auth.herokuapp.com'>
-              DEMO, Simple chat with authorization via Socket.io.
-            </a>
+            <WrapLink>
+              <Link
+                  href='https://www.npmjs.com/package/redux-socket-auth-middleware'
+                  title='Redux middleware socket.io authentication.'
+              >
+                <NpmIcon color='#cc3534' id='icon-NPM'/>
+                Redux middleware for handle socket.io authentication.
+              </Link>
+              <CodeSourceLink
+                  href='https://github.com/sakalx/redux-socket-auth-middleware'/>
+            </WrapLink>
             <p>
               Middleware are the right place for persistent connections like
               websockets in a Redux app. Given a single action with a
               socketIOClient.connect payload, the middleware transforms the
               action to a separate a pending action and a separate
-              connected/rejected/disconnected action.
+              connected/rejected/disconnected action.<br/>
+              <Link
+                  style={{fontSize: 16}}
+                  href='https://socketio-auth.herokuapp.com'
+                  title=' DEMO, chat with authorization via Socket.io'
+              />
             </p>
           </Item>
         </ul>
 
-        <section>
-          <header>
+        <Languages>
+          <TitleLang>
             <Icon id='icon-Language'/>
-
             <h3>Languages</h3>
-            <h4>
-              <strong>Ukrainian</strong>
-              Native.
-            </h4>
-            <h4>
-              <strong>Russian</strong>
-              Native.
-            </h4>
-            <h4>
-              <strong>English</strong>
-              Limited working proficiency.
-            </h4>
-          </header>
-        </section>
+          </TitleLang>
+          <ul>
+            <ItemLang>
+              <Icon id='icon-Ukraine'/>
+              <strong
+                  data-tooltip='NATIVE'>Ukrainian.</strong>
+            </ItemLang>
+            <ItemLang>
+              <Icon id='icon-Russia'/>
+              <strong
+                  data-tooltip='NATIVE'>Russian.</strong>
+            </ItemLang>
+            <ItemLang>
+              <Icon id='icon-USA'/>
+              <strong
+                  data-tooltip='Intermediate working proficiency'>English.</strong>
+            </ItemLang>
+          </ul>
+        </Languages>
+
       </article>
   );
 }
