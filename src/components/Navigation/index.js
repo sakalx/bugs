@@ -1,18 +1,28 @@
 import React from 'react';
 
-import SvgIcon from 'root/components/SvgIcon';
+import rotateCube from 'root/utils/rotate-cube';
 
-import {Nav, WrapItem} from './style';
+import Item from './Item';
 
-const Item = ({title}) =>
-    <WrapItem>
-      <SvgIcon color='var(--secondary-color)' id={`icon-${title}`}/>
-      <span>{title}</span>
-    </WrapItem>;
+import {Nav} from './style';
 
 function Navigation() {
+  let preX = 0;
+  let preY = 0;
+
+  const handleHover = () => {
+    const cube = document.getElementById('-cube-viewport');
+    const style = getComputedStyle(cube);
+    preX = style.getPropertyValue('--x');
+    preY = style.getPropertyValue('--y');
+  };
+
+  const handleHoverOut = () => {
+    rotateCube(preX, preY);
+  };
+
   return (
-      <Nav>
+      <Nav onMouseEnter={handleHover} onMouseLeave={handleHoverOut}>
         <Item title='About'/>
         <Item title='Education'/>
         <Item title='Experience'/>

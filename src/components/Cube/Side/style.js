@@ -14,9 +14,9 @@ export const Wrap = styled('section')`
   transition: transform .3s ease;
   user-select: none;
   
-  :hover {
-    transform: rotate(360deg);
-  }
+  //:hover {
+  //  transform: rotate(360deg);
+  //}
 `;
 
 export const Title = styled('h3')`

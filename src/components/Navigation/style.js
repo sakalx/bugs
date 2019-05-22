@@ -1,40 +1,52 @@
 import styled from 'styled-components';
 
-export const Nav = styled('nav')`
+export const Nav = styled('ul')`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100vh;
   left: 0;
-  overflow: hidden;
-  padding-left: 16px;
-  padding-top: 25px;
+  margin: 0 16px;
   position: absolute;
   top: 0;
+  width: auto;
   z-index: 2;
+  
+  @media (max-width: 620px) {
+    flex-direction: row;
+    height: auto;
+    margin-top: 21px;
+        
+    li::after, li::before {
+      content: none;
+    }
+  }
 `;
 
-export const WrapItem = styled('div')`
+export const WrapItem = styled('li')`
+  align-items: center;
   color: var(--primary-color);
   cursor: pointer;
+  display: flex;
+  flex: 1;
   font-size: 18px;
-  margin: 8px 0;
-  position: relative;
-  text-decoration: underline;
+  justify-content: center;
+  padding: 8px;
   
   span {
-    display: inline-block;
     transition: transform .5s cubic-bezier(.5,-.75,.7,2);
   }
   
   svg {
-    bottom: 0;
-    height: 30px;
-    left: 30%;
+    height: 40px;
     position: absolute;
     transform: scale(0);
     transition: transform .5s;
-    width: 30px;
+    width: 40px;
   }
   
   :hover span {
-    transform: translateX(-200%);
+    transform: translateX(35vw) scale(0);
   }
   
   :hover svg {

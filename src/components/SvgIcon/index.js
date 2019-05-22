@@ -6,7 +6,7 @@ function SvgIcon({
                    ...rest
                  }) {
   return (
-      <svg aria-labelledby={id} role='img' {...rest}>
+      <svg {...rest}>
         <use fill={color} xlinkHref={`#${id}`}/>
       </svg>
   );
