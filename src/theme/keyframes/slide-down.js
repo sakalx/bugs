@@ -2,11 +2,9 @@ import {keyframes} from 'styled-components';
 
 export default keyframes`
   from {
-    transform: scale(5);
-    opacity: 0;
+    transform: scale(5) translateY(-100%);
   }
   to {
-    transform: scale(1);
-    opacity: 1;
+    transform: scale(1)  translateY(0);
   }
 `;

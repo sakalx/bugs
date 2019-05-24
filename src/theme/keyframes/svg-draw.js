@@ -1,8 +1,13 @@
 import {keyframes} from 'styled-components';
 
-export default function(dashoffset = 10, opacity = 1) {
+export default function(
+    dashoffset = 10,
+    opacity = 1,
+    color = '#000',
+) {
   return keyframes`
     from {
+      stroke: ${color};
       stroke-dashoffset: ${dashoffset};
       opacity: 1;
     } 

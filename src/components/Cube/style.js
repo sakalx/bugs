@@ -1,12 +1,13 @@
 import styled, {css} from 'styled-components';
 
 import revealCube from 'root/theme/keyframes/reveal-cube';
-import svgDash from 'root/theme/keyframes/svg-dash';
+import showIn from 'root/theme/keyframes/show-in';
 
 import Cube3D from 'react-cube3d-component';
 import SvgIcon from 'root/components/SvgIcon';
 
 export const Cube = styled(Cube3D)`
+  animation: ${showIn} 1s;
   position: absolute;
   z-index: 3000;
   
@@ -18,9 +19,4 @@ export const Cube = styled(Cube3D)`
 export const Icon = styled(SvgIcon)`
   height: 23vmin;
   width: 23vmin;
-  
-  use {
-    animation: ${svgDash} 1s cubic-bezier(.17,.67,1,1.23);
-    stroke-dasharray: 1820;
-  }
 `;

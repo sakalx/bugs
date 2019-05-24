@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
+import slideDown from 'root/theme/keyframes/slide-down';
+
 export const Nav = styled('ul')`
+  animation: ${slideDown} 2s;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -20,36 +23,5 @@ export const Nav = styled('ul')`
     li::after, li::before {
       content: none;
     }
-  }
-`;
-
-export const WrapItem = styled('li')`
-  align-items: center;
-  color: var(--primary-color);
-  cursor: pointer;
-  display: flex;
-  flex: 1;
-  font-size: 18px;
-  justify-content: center;
-  padding: 8px;
-  
-  span {
-    transition: transform .5s cubic-bezier(.5,-.75,.7,2);
-  }
-  
-  svg {
-    height: 40px;
-    position: absolute;
-    transform: scale(0);
-    transition: transform .5s;
-    width: 40px;
-  }
-  
-  :hover span {
-    transform: translateX(35vw) scale(0);
-  }
-  
-  :hover svg {
-    transform: scale(1);
   }
 `;

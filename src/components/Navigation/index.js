@@ -3,7 +3,6 @@ import React from 'react';
 import rotateCube from 'root/utils/rotate-cube';
 
 import Item from './Item';
-
 import {Nav} from './style';
 
 function Navigation() {

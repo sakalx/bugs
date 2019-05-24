@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import fadeIn from 'root/theme/keyframes/fade-in';
-
 export const Wrap = styled('section')`
   align-items: center;
   background-color: var(--background-color);
@@ -13,14 +11,22 @@ export const Wrap = styled('section')`
   justify-content: center;
   transition: transform .3s ease;
   user-select: none;
-  
-  //:hover {
-  //  transform: rotate(360deg);
-  //}
+
+  :hover h3{
+    background-position: 0;
+  }
 `;
 
 export const Title = styled('h3')`
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, 
+    var(--secondary-color),
+    var(--secondary-color) 50%, 
+    var(--background-invert-color) 50%);
+  background-position: 100%;
+  background-size: 200% 100%;
   pointer-events: none;
   text-transform: uppercase;
-  animation: ${fadeIn} 1s cubic-bezier(.32,2,.55,.27);
+  transition: background-position 1s cubic-bezier(.32,2,.55,.27);
 `;

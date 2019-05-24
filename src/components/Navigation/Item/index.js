@@ -6,11 +6,9 @@ import {showPage} from 'root/redux-core/actions/page';
 import rotateCube from 'root/utils/rotate-cube';
 
 import SvgIcon from 'root/components/SvgIcon';
-
-import {WrapItem} from './style';
+import {Wrap} from './style';
 
 const Item = ({title, showPage}) => {
-
   const handleShowPage = () => {
     showPage(title);
   };
@@ -41,13 +39,13 @@ const Item = ({title, showPage}) => {
   };
 
   return (
-      <WrapItem
+      <Wrap
           onMouseEnter={handleHover}
           onClick={handleShowPage}
       >
         <SvgIcon color='var(--secondary-color)' id={`icon-${title}`}/>
         <span>{title}</span>
-      </WrapItem>
+      </Wrap>
   );
 };
 

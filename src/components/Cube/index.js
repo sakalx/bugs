@@ -31,8 +31,8 @@ function CubeComponent({page}) {
         {sides.map((label) =>
             <Side key={label} label={label}>
               {page.active
-                  ? <Icon id='icon-Close'/>
-                  : <Icon id={`icon-${label}`}/>
+                  ? <Icon color='var(--secondary-color)' id='icon-Close'/>
+                  : <Icon color='var(--background-invert-color)' id={`icon-${label}`}/>
               }
             </Side>,
         )}
