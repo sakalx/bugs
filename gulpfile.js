@@ -8,6 +8,7 @@ const developSVG = './src/static/svg';
 gulp.task('svg-clean', () => gulp.src([
       `${developSVG}/minified`,
       `${developSVG}/symbol`,
+      `${developSVG}/view`,
     ], {read: false}).pipe(clean()),
 );
 

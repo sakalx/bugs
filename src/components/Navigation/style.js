@@ -6,7 +6,7 @@ export const Nav = styled('ul')`
   flex-wrap: wrap;
   height: 100vh;
   left: 0;
-  margin: 0 16px;
+  margin: 0 21px;
   position: absolute;
   top: 0;
   width: auto;

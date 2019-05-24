@@ -13,7 +13,7 @@ export const Wrap = styled('header')`
 export const Title = styled('h1')`
   animation: ${glitchText} 2s cubic-bezier(.32,2,.55,.27) infinite;
   flex: 1;
-  margin-left: 20vmin;
+  margin-right: 20vmin;
   text-align: center;
   text-transform: uppercase;
 `;

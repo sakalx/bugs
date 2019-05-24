@@ -7,8 +7,8 @@ import {Icon, Title, Wrap} from './style';
 function Header({title, page}) {
   return (
       <Wrap role='heading' aria-labelledby={page.active}>
-        <Title aria-labelledby={title}>{title}</Title>
         <Icon color='#6f6f6f' id={`icon-${page.active}`}/>
+        <Title aria-labelledby={title}>{title}</Title>
       </Wrap>
   );
 }

@@ -34,7 +34,7 @@ function Overlays({page}) {
 
   return (
       <OverlayEffect
-          direction='bottom-right'
+          direction='bottom-left'
           id='overlay-viewport'
           isOpen={!!page.active}
           mainFon='#fff'
