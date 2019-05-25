@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import Side from './Side';
 
 import {Cube, Icon} from './style';
+import showIn from 'root/theme/keyframes/show-in';
 
 const sides = [
   // Front
@@ -25,7 +26,7 @@ function CubeComponent({page}) {
   return (
       <Cube
           cubeSize='50vmin'
-          reveal={!!page.active}
+          out={page.active}
           viewportSize='70vmin'
       >
         {sides.map((label) =>

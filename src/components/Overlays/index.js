@@ -1,11 +1,9 @@
-import React, {useEffect} from 'react';
-
+import React, {useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 
 import setDocTitle from 'root/utils/doc-title';
 
 import OverlayEffect from 'overlay-reveal-effect';
-
 import AboutPage from 'root/pages/About';
 import ContactPage from 'root/pages/Contact';
 import EducationPage from 'root/pages/Education';
@@ -17,7 +15,12 @@ import MouseTrail from 'root/components/MouseTrail';
 import {WrapContent} from './style';
 
 function Overlays({page}) {
-  useEffect(() => setDocTitle(page.active), [page.active]);
+  const contentEl = useRef(null);
+
+  useEffect(() => {
+    setDocTitle(page.active);
+    !page.active && (contentEl.current.scrollTop = 0);
+  }, [page.active]);
 
   const renderContent = () => {
     const pages = {
@@ -37,11 +40,11 @@ function Overlays({page}) {
           direction='bottom-left'
           id='overlay-viewport'
           isOpen={!!page.active}
-          mainFon='#fff'
-          secondaryFon='#ce8fff'
+          mainFon='var(--background-color)'
+          secondaryFon='var(--secondary-dark-color)'
           style={{position: 'relative'}}
       >
-        <WrapContent>
+        <WrapContent ref={contentEl}>
           {renderContent()}
         </WrapContent>
         <MouseTrail/>

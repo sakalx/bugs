@@ -30,7 +30,7 @@ export const BottomRight = styled(SvgIcon)`
   width: 60vmin;
 
   use {
-    animation: ${svgDraw(-19900, 0.5, 'rgb(255,0,0)')} 12s 8s both;
+    animation: ${svgDraw(-19900, 0.6, 'rgb(255,0,0)')} 12s 8s both;
     stroke-dasharray: 31294, 31294;
     stroke: rgb(0,255,255);
   }
@@ -45,7 +45,7 @@ export const BottomLeft = styled(SvgIcon)`
   width: 100vmin;
 
   use {
-    animation: ${svgDraw(-2650, 0.2, 'rgb(255,0,255)')} 12s 2s both;
+    animation: ${svgDraw(-2650, 0.3, 'rgb(255,0,255)')} 12s 2s both;
     stroke-dasharray: 3000, 3000;
     stroke: rgb(0,255,255);
   }

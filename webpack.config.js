@@ -71,7 +71,7 @@ module.exports = (env, argv = {}) => {
     prefix: 'favicon/',
     emitStats: false,
     inject: true,
-    background: '#fff',
+    background: '#000',
     icons: {
       android: false,
       appleIcon: false,
