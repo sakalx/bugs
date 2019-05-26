@@ -25,9 +25,9 @@ function CubeComponent({page}) {
 
   return (
       <Cube
-          cubeSize='50vmin'
+          cubeSize='40vmin'
           out={page.active}
-          viewportSize='70vmin'
+          viewportSize='65vmin'
       >
         {sides.map((label) =>
             <Side key={label} label={label}>

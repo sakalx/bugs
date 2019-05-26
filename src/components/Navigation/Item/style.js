@@ -6,7 +6,7 @@ export const Wrap = styled('li')`
   cursor: pointer;
   display: flex;
   flex: 1;
-  font-size: 18px;
+  font-size: calc(10px + 2vmin);
   justify-content: center;
   padding: 8px;
   

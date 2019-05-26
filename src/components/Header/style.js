@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import glitchText from 'root/theme/keyframes/glitch-text';
-import svgDash from 'root/theme/keyframes/svg-dash';
+import svgDrawIcon from 'root/theme/keyframes/svg-draw-icon';
 
 import SvgIcon from 'root/components/SvgIcon';
 
@@ -23,7 +23,7 @@ export const Icon = styled(SvgIcon)`
   width: 20vmin;
 
   use {
-    animation: ${svgDash} 3s cubic-bezier(.17,.67,1,1.23);
+    animation: ${svgDrawIcon} 4s;
     stroke-dasharray: 1820;
   }
 `;
