@@ -17,7 +17,7 @@ export const Wrap = styled('section')`
   }
 `;
 
-export const Title = styled('h3')`
+export const Title = styled('h4')`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(to right, 

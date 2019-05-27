@@ -8,21 +8,6 @@ const cssBaseline = css`
   z-index: 2;
 `;
 
-export const OrnamentTop = styled(SvgIcon)`
-  ${cssBaseline};
-  height: 60vmin;
-  right: 90px;
-  top: -11vmin;
-  transform: rotate(180deg);
-  width: 80vmin;
-
-  use {
-    animation: ${svgDraw(-8300, 0.6, 'rgb(255,0,255)')} 12s 1s both;
-    stroke-dasharray: 8300, 8300;
-    stroke: rgb(0,255,255);
-  }
-`;
-
 export const OrnamentBottom = styled(SvgIcon)`
   ${cssBaseline};
   bottom: 0;
@@ -32,8 +17,8 @@ export const OrnamentBottom = styled(SvgIcon)`
   transform: rotate(90deg);
   
   use {
-    animation: ${svgDraw(-8460, 0.6, 'rgb(255,0,255)')} 12s 10s both;
+    animation: ${svgDraw(-8460, 0.2, '#f50057')} 12s 10s both;
     stroke-dasharray: 9000, 9000;
-    stroke: rgb(0,255,255);
-  }
+    stroke: #000;
+  };
 `;

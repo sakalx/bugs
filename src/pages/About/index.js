@@ -2,7 +2,7 @@ import React from 'react';
 
 import Header from 'root/components/Header';
 
-import {OrnamentTop, OrnamentBottom} from './style';
+import {OrnamentBottom} from './style';
 
 function AboutPage() {
   return (
@@ -38,7 +38,7 @@ function AboutPage() {
           to develop plans with an ability to combine top-level academic
           training with real-world experience during critical conditions.
         </p>
-        <OrnamentTop color='none' id='ornament_1'/>
+
         <OrnamentBottom color='none' id='ornament_5'/>
       </article>
   );

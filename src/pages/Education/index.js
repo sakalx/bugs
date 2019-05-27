@@ -5,18 +5,11 @@ import Link from 'root/components/Link';
 import TimeRange from 'root/components/TimeRange';
 import VerticalBar from 'root/components/VerticalBar';
 
-import {
-  Content,
-  Education,
-  Icon,
-  OrnamentGeek,
-  OrnamentJs,
-  OrnamentUdacity,
-} from './style';
+import {Content, Education, Icon, Ornament} from './style';
 
 function EducationPage() {
   return (
-      <article>
+      <article style={{position: 'relative'}}>
         <Header title='Education'/>
 
         <Education>
@@ -35,7 +28,6 @@ function EducationPage() {
         </Education>
 
         <Education rtl>
-          <OrnamentGeek color='none' id='ornament_1'/>
           <Icon color='#50667b' id='icon-GB'/>
           <Content>
             <h2>Professional Web Developer.</h2>
@@ -72,7 +64,6 @@ function EducationPage() {
         </Education>
 
         <Education>
-          <OrnamentJs color='none' id='ornament_2'/>
           <Icon color='#fd9460' id='icon-JSinfo'/>
           <Content>
             <h2>JavaScript Soft Developer.</h2>
@@ -94,8 +85,6 @@ function EducationPage() {
         </Education>
 
         <Education rtl>
-          <OrnamentUdacity color='none' id='ornament_5'/>
-
           <Icon color='#02b3e4' id='icon-Udacity'/>
           <Content>
             <h2>React Developer.</h2>
@@ -116,6 +105,7 @@ function EducationPage() {
           </Content>
         </Education>
 
+        <Ornament color='none' id='ornament_2'/>
       </article>
   );
 }
