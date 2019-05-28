@@ -41,7 +41,7 @@ function Overlays({page}) {
           id='overlay-viewport'
           isOpen={!!page.active}
           mainFon='var(--background-color)'
-          secondaryFon='var(--secondary-dark-color)'
+          secondaryFon='#e5e5e5'
           style={{position: 'relative'}}
       >
         <WrapContent ref={contentEl}>

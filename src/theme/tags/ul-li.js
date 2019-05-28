@@ -11,7 +11,7 @@ export default css`
     font-size: calc(8px + 2vmin);
     list-style: none;
     margin:0; 
-    padding: 8px;
+    padding: 10px;
     position: relative;
     text-align: center;
   }
@@ -23,7 +23,7 @@ export default css`
     position: absolute;
     top: 0;
     width: 50%;
-    z-index: -1;
+    z-index: 0;
   }
   
   li:nth-child(odd):after {

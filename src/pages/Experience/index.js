@@ -3,14 +3,20 @@ import React from 'react';
 import Header from 'root/components/Header';
 import TimeRange from 'root/components/TimeRange';
 
-import {Company, Info, Icon} from './style';
+import {
+  Card,
+  Company,
+  Info,
+  Icon,
+    Ornament,
+} from './style';
 
 function ExperiencePage() {
   return (
       <article>
         <Header title='Experience'/>
 
-        <div>
+        <Card>
           <Company>
             <Icon color='#c8282d' id='icon-MPoint'/>
             <h2>mPoint Media, Inc.</h2>
@@ -21,7 +27,7 @@ function ExperiencePage() {
                   end={{dateTime: new Date(), title: 'Present'}}
               />
             </Info>
-            <h4>Junior Front-end Engineering.</h4>
+            <h4>Junior Front-end Engineering</h4>
           </Company>
           <ul>
             <li>
@@ -52,11 +58,9 @@ function ExperiencePage() {
               tight deadlines.
             </li>
           </ul>
-        </div>
+        </Card>
 
-        <hr/>
-
-        <div>
+        <Card>
           <Company>
             <Icon id='icon-HeartsMinds'/>
             <h2>Hearts And Minds, Inc.</h2>
@@ -67,7 +71,7 @@ function ExperiencePage() {
                   end={{dateTime: '2018-05-01', title: 'May 2018'}}
               />
             </Info>
-            <h4>Web Developer Volunteer.</h4>
+            <h4>Web Developer Volunteer</h4>
           </Company>
           <ul>
             <li>
@@ -87,11 +91,9 @@ function ExperiencePage() {
               Customizing WordPress theme, adding new features.
             </li>
           </ul>
-        </div>
+        </Card>
 
-        <hr/>
-
-        <div>
+        <Card>
           <Company>
             <h2>Self-Employed.</h2>
             <Info>
@@ -101,7 +103,7 @@ function ExperiencePage() {
                   end={{dateTime: '2018-01-01', title: 'January 2018'}}
               />
             </Info>
-            <h4>Front-end Developer.</h4>
+            <h4>Front-end Developer</h4>
           </Company>
           <ul>
             <li>
@@ -127,11 +129,9 @@ function ExperiencePage() {
               marketing services, and front-end engineering projects.
             </li>
           </ul>
-        </div>
+        </Card>
 
-        <hr/>
-
-        <div>
+        <Card>
           <Company>
             <h2>ТехноХвиля.</h2>
             <Info>
@@ -141,7 +141,7 @@ function ExperiencePage() {
                   end={{dateTime: '2016-01-01', title: 'January 2016'}}
               />
             </Info>
-            <h4>Senior Windows System Administrator.</h4>
+            <h4>Senior Windows System Administrator</h4>
           </Company>
           <ul>
             <li>
@@ -172,7 +172,9 @@ function ExperiencePage() {
               problems.
             </li>
           </ul>
-        </div>
+        </Card>
+
+        <Ornament color='none' id='ornament_4'/>
       </article>
   );
 }

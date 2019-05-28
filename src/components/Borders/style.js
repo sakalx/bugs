@@ -23,7 +23,7 @@ export const TopRight = styled(SvgIcon)`
   ${cssBaseline};
   animation: ${zoomInReverse} 2s; 
   right: -7.2vmin;
-  top: -7.5vmin;
+  top: -7.6vmin;
 `;
 
 export const BottomRight = styled(SvgIcon)`

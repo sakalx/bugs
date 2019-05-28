@@ -24,7 +24,7 @@ export default createGlobalStyle`
     overscroll-behavior-y: contain;
   };
   
-   div {
+  div {
     box-sizing: border-box;
   };
   
@@ -59,10 +59,15 @@ export default createGlobalStyle`
     font-style: italic;
   };
   
-  hr {
-    border: 0;
-    box-shadow: 0 0 10px 1px black;
-    height: 0;
-    margin: 21px 0;
+  
+  address {
+    font-size: calc(6px + 2vmin);
   }
+  
+  //hr {
+  //  border: 0;
+  //  box-shadow: 0 0 10px 1px black;
+  //  height: 0;
+  //  margin: 21px 0;
+  //}
 `;

@@ -9,6 +9,7 @@ import SvgIcon from 'root/components/SvgIcon';
 export const Wrap = styled('header')`
   align-items: center;
   display: flex;
+  margin: 8px;
   position: relative;
 `;
 
@@ -32,15 +33,15 @@ export const Title = styled('h1')`
 
 export const Ornament = styled(SvgIcon)`
   height: 60vmin;
-  position: absolute;
+  position: fixed;
   right: 5vw;
-  top: -15vmin;
+  top: -12vmin;
   transform: rotate(180deg);
   width: 80vmin;
   z-index: 2;
 
   use {
-    animation: ${svgDraw(-8300, 0.2, '#f50057')} 12s 1s both;
+    animation: ${svgDraw(-8300, 0.2, '#f50057')} 16s 1s both;
     stroke-dasharray: 8300, 8300;
     stroke: #000;
   };

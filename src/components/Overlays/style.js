@@ -5,7 +5,7 @@ export const WrapContent = styled('div')`
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-  padding: 24px;
+  padding: 20px;
   position: absolute;
   width: 100vw;
   z-index: 1;

@@ -6,7 +6,7 @@ import {OrnamentBottom} from './style';
 
 function AboutPage() {
   return (
-      <article role='article' aria-labelledby='described about sakal'>
+      <article>
         <Header title='Hi my name is Serhii'/>
 
         <p>
