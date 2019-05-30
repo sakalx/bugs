@@ -1,12 +1,8 @@
 import styled from 'styled-components';
+import svgDraw from 'root/theme/keyframes/svg-draw';
 
+import Paper from 'root/components/Paper';
 import SvgIcon from 'root/components/SvgIcon';
-
-export const Wrap = styled('div')`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-`;
 
 export const WrapTitle = styled('header')`
   align-items: center;
@@ -14,11 +10,18 @@ export const WrapTitle = styled('header')`
   margin-bottom: 8px;
 `;
 
-export const Content = styled('section')`
+export const Wrap = styled('ul')`
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-height: 60vh;
+`;
+
+export const Card = styled(Paper)`
   flex-direction: column;
-  flex: 0 0 185px;
+  flex: 1;
   margin: 16px;
+  padding: 16px;
 `;
 
 export const Icon = styled(SvgIcon)`
@@ -26,4 +29,20 @@ export const Icon = styled(SvgIcon)`
   height: 8vmin;
   margin: 0 8px;
   width: 8vmin;
+`;
+
+export const Ornament = styled(SvgIcon)`
+  bottom: -8vmin;
+  height: 95vmin;
+  left: 15vw;
+  position: fixed;
+  transform: rotate(-15deg) scale(-1, 1);;  
+  width: 95vmin;
+  z-index: 2;
+    
+  use {
+    animation: ${svgDraw(-2620, 0.15, '#f50057')} 21s 5s both;
+    stroke-dasharray: 2620, 2620;
+    stroke: #000;
+  };
 `;

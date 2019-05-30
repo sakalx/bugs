@@ -2,7 +2,7 @@ import React from 'react';
 
 import Header from 'root/components/Header';
 
-import {Card, Column, Icon, Title, Wrap} from './style';
+import {Card, Column, Icon, Ornament, Title, Wrap} from './style';
 
 function SkillsPage() {
   return (
@@ -81,6 +81,8 @@ function SkillsPage() {
             </Card>
           </Column>
         </Wrap>
+
+        <Ornament color='none' id='ornament_3'/>
       </article>
   );
 }

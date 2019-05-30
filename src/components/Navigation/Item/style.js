@@ -14,11 +14,11 @@ export const Wrap = styled('li')`
   }
   
   svg {
-    height: 45px;
+    height: 8vmin;
     position: absolute;
     transform: scale(0);
     transition: transform .5s;
-    width: 45px;
+    width: 8vmin;
   }
   
   :hover span {

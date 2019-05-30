@@ -5,8 +5,14 @@ import Paper from 'root/components/Paper';
 import SvgIcon from 'root/components/SvgIcon';
 
 export const Card = styled(Paper)`
-  margin: 6vh 0;
   padding: 12px;
+  
+  li:nth-child(odd) {
+    text-align: left;
+  };
+  li:nth-child(even) {
+    text-align: right;
+  };  
 `;
 
 export const Company = styled('header')`
@@ -14,11 +20,12 @@ export const Company = styled('header')`
   display: flex;
   flex-wrap: wrap;
   flex: 1;
-  margin-top: 12px;
+  justify-content: center;
+  margin-top: 6vmax;
 `;
 
 export const Info = styled('div')`
-  flex: 1 1 120px;
+  flex: 1 1 200px;
   margin: 0 16px;
   text-align: center;
 `;

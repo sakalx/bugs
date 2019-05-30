@@ -3,32 +3,26 @@ import React from 'react';
 import Header from 'root/components/Header';
 import TimeRange from 'root/components/TimeRange';
 
-import {
-  Card,
-  Company,
-  Info,
-  Icon,
-    Ornament,
-} from './style';
+import {Card, Company, Info, Icon, Ornament} from './style';
 
 function ExperiencePage() {
   return (
       <article>
         <Header title='Experience'/>
 
+        <Company>
+          <Icon color='#c8282d' id='icon-MPoint'/>
+          <h2>mPoint Media, Inc.</h2>
+          <Info>
+            <address>New York, NY</address>
+            <TimeRange
+                start={{dateTime: '2018-05-01', title: 'May 2018'}}
+                end={{dateTime: new Date(), title: 'Present'}}
+            />
+          </Info>
+          <h4>Junior Front-end Engineering</h4>
+        </Company>
         <Card>
-          <Company>
-            <Icon color='#c8282d' id='icon-MPoint'/>
-            <h2>mPoint Media, Inc.</h2>
-            <Info>
-              <address>New York, NY</address>
-              <TimeRange
-                  start={{dateTime: '2018-05-01', title: 'May 2018'}}
-                  end={{dateTime: new Date(), title: 'Present'}}
-              />
-            </Info>
-            <h4>Junior Front-end Engineering</h4>
-          </Company>
           <ul>
             <li>
               Developing fully functional responsive prototypes based on
@@ -60,19 +54,19 @@ function ExperiencePage() {
           </ul>
         </Card>
 
+        <Company>
+          <Icon id='icon-HeartsMinds'/>
+          <h2>Hearts And Minds, Inc.</h2>
+          <Info>
+            <address>New York, NY</address>
+            <TimeRange
+                start={{dateTime: '2018-02-01', title: 'February 2018'}}
+                end={{dateTime: '2018-05-01', title: 'May 2018'}}
+            />
+          </Info>
+          <h4>Web Developer Volunteer</h4>
+        </Company>
         <Card>
-          <Company>
-            <Icon id='icon-HeartsMinds'/>
-            <h2>Hearts And Minds, Inc.</h2>
-            <Info>
-              <address>New York, NY</address>
-              <TimeRange
-                  start={{dateTime: '2018-02-01', title: 'February 2018'}}
-                  end={{dateTime: '2018-05-01', title: 'May 2018'}}
-              />
-            </Info>
-            <h4>Web Developer Volunteer</h4>
-          </Company>
           <ul>
             <li>
               Implemented functions for custom scrolling, used vanilla
@@ -93,18 +87,18 @@ function ExperiencePage() {
           </ul>
         </Card>
 
+        <Company>
+          <h2>Self-Employed.</h2>
+          <Info>
+            <address>New York, NY</address>
+            <TimeRange
+                start={{dateTime: '2017-02-01', title: 'February 2017'}}
+                end={{dateTime: '2018-01-01', title: 'January 2018'}}
+            />
+          </Info>
+          <h4>Front-end Developer</h4>
+        </Company>
         <Card>
-          <Company>
-            <h2>Self-Employed.</h2>
-            <Info>
-              <address>New York, NY</address>
-              <TimeRange
-                  start={{dateTime: '2017-02-01', title: 'February 2017'}}
-                  end={{dateTime: '2018-01-01', title: 'January 2018'}}
-              />
-            </Info>
-            <h4>Front-end Developer</h4>
-          </Company>
           <ul>
             <li>
               Skillfully built responsive HTML pages from wireframes,
@@ -131,18 +125,18 @@ function ExperiencePage() {
           </ul>
         </Card>
 
+        <Company>
+          <h2>ТехноХвиля.</h2>
+          <Info>
+            <address>Kalush, Ivano-Frankivsk, Ukraine</address>
+            <TimeRange
+                start={{dateTime: '2008-08-01', title: 'August 2008'}}
+                end={{dateTime: '2016-01-01', title: 'January 2016'}}
+            />
+          </Info>
+          <h4>Senior Windows System Administrator</h4>
+        </Company>
         <Card>
-          <Company>
-            <h2>ТехноХвиля.</h2>
-            <Info>
-              <address>Kalush, Ivano-Frankivsk, Ukraine</address>
-              <TimeRange
-                  start={{dateTime: '2008-08-01', title: 'August 2008'}}
-                  end={{dateTime: '2016-01-01', title: 'January 2016'}}
-              />
-            </Info>
-            <h4>Senior Windows System Administrator</h4>
-          </Company>
           <ul>
             <li>
               Resolve issues related to Windows, application, virus isolation,

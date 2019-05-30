@@ -3,7 +3,7 @@ import React from 'react';
 import Header from 'root/components/Header';
 import Link from 'root/components/Link';
 
-import {Content, Icon, Wrap, WrapTitle} from './style';
+import {Card, Icon, Ornament, Wrap, WrapTitle} from './style';
 
 function ContactPage() {
   return (
@@ -11,7 +11,8 @@ function ContactPage() {
         <Header title='Contact'/>
 
         <Wrap>
-          <Content>
+          <li>
+          <Card>
             <WrapTitle>
               <Icon color='#8c6ab6' id='icon-Email'/>
               <h2 style={{margin: 0}}>Email</h2>
@@ -28,9 +29,10 @@ function ContactPage() {
                 href='mailto:sakals@mail.ua'
                 title='sakals@mail.ua'
             />
-          </Content>
-
-          <Content>
+          </Card>
+          </li>
+          <li>
+          <Card>
             <WrapTitle>
               <Icon color='#039688' id='icon-Phone'/>
               <h2 style={{margin: 0}}>Phone</h2>
@@ -39,9 +41,10 @@ function ContactPage() {
                 href='tel:1-929-238-3363'
                 title='1-929-238-3363'
             />
-          </Content>
-
-          <Content>
+          </Card>
+          </li>
+          <li>
+          <Card>
             <WrapTitle>
               <Icon id='icon-Linkedin'/>
               <Link
@@ -56,9 +59,11 @@ function ContactPage() {
                   title='GitHub'
               />
             </WrapTitle>
-          </Content>
-
+          </Card>
+          </li>
         </Wrap>
+
+        <Ornament color='none' id='ornament_2'/>
       </section>
   );
 }
