@@ -23,8 +23,11 @@ ReactDOM.render(
     , document.getElementById('root'));
 console.timeEnd('ReactDOM.render');
 
-console.time('Injecting');
+console.time('Injecting SVG');
 injectSVG();
+console.timeEnd('Injecting SVG');
+
+console.time('Injecting FONTS');
 injectFont('PT+Sans');
 injectFont('Akronim');
-console.timeEnd('Injecting');
+console.timeEnd('Injecting FONTS');

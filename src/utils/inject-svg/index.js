@@ -1,28 +1,35 @@
 export default function() {
   const VERSION = '0.0.12';
-  const CACHE_KEY = 'SVG_SPRITE';
-  const VERSION_KEY = 'SVG_VERSION';
+  const MAIN_CACHE_KEY = 'SVG_SPRITE/main/';
+  const REST_CACHE_KEY = 'SVG_SPRITE/rest/';
+  const VERSION_KEY = 'SVG_VERSION/';
 
-  const svgSprite = localStorage.getItem(CACHE_KEY);
   const svgVersion = localStorage.getItem(VERSION_KEY);
+  const mainSvgSprite = localStorage.getItem(MAIN_CACHE_KEY);
+  const restSvgSprite = localStorage.getItem(REST_CACHE_KEY);
 
-  const insertSVG = svg => {
+  const insertSVG = (key, svgSprite) => {
     const container = document.createElement('div');
-    container.innerHTML = svg;
+    container.innerHTML = svgSprite;
     container.style.display = 'none';
     document.body.appendChild(container);
+
+    localStorage.setItem(key, svgSprite);
+    localStorage.setItem(VERSION_KEY, VERSION);
   };
 
-  if (svgVersion === VERSION && svgSprite) {
-    insertSVG(svgSprite);
+  if (svgVersion === VERSION && mainSvgSprite && restSvgSprite) {
+    insertSVG(MAIN_CACHE_KEY, mainSvgSprite);
+    insertSVG(REST_CACHE_KEY, restSvgSprite);
   } else {
     (async () => {
-      const svgModule = await import('root/static/svg/symbol/svg/sprite.symbol.svg');
-      const svgSprite = svgModule.default;
+      const mainSvg = await import('root/static/svg/sprite/main/symbol/svg/sprite.symbol.svg');
+      const mainSvgSprite = mainSvg.default;
+      insertSVG(MAIN_CACHE_KEY, mainSvgSprite);
 
-      insertSVG(svgSprite);
-      localStorage.setItem(CACHE_KEY, svgSprite);
-      localStorage.setItem(VERSION_KEY, VERSION);
+      const restSvg = await import('root/static/svg/sprite/main/symbol/svg/sprite.symbol.svg');
+      const restSvgSprite = restSvg.default;
+      insertSVG(REST_CACHE_KEY, restSvgSprite);
     })();
   }
 }
