@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import './utils/detect-mobile';
 import injectSVG from './utils/inject-svg';
 import injectFont from './utils/inject-font';
 
