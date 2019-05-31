@@ -25,7 +25,7 @@ export const WrapLink = styled('div')`
 export const CodeLink = styled(Link)`
   :hover svg use {
     fill: var(--secondary-color);
-  }
+  };
 `;
 
 export const Icon = styled(SvgIcon)`
@@ -69,5 +69,5 @@ export const Ornament = styled(SvgIcon)`
     animation: ${svgDraw(-8460, 0.2, '#f50057')} 21s 5s both;
     stroke-dasharray: 9000, 9000;
     stroke: #000;
-  }
+  };
 `;

@@ -27,7 +27,7 @@ export default function() {
       const mainSvgSprite = mainSvg.default;
       insertSVG(MAIN_CACHE_KEY, mainSvgSprite);
 
-      const restSvg = await import('root/static/svg/sprite/main/symbol/svg/sprite.symbol.svg');
+      const restSvg = await import('root/static/svg/sprite/rest/symbol/svg/sprite.symbol.svg');
       const restSvgSprite = restSvg.default;
       insertSVG(REST_CACHE_KEY, restSvgSprite);
     })();

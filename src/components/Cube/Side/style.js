@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import SvgIcon from 'root/components/SvgIcon';
 
 export const Wrap = styled('section')`
   align-items: center;
@@ -15,7 +16,7 @@ export const Wrap = styled('section')`
   
   :hover h3{
     background-position: 0;
-  }
+  };
 `;
 
 export const Title = styled('h4')`
@@ -30,4 +31,9 @@ export const Title = styled('h4')`
   pointer-events: none;
   text-transform: uppercase;
   transition: background-position 1s cubic-bezier(.32,2,.55,.27);
+`;
+
+export const Icon = styled(SvgIcon)`
+  height: 23vmin;
+  width: 23vmin;
 `;

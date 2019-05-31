@@ -1,8 +1,8 @@
 import styled from 'styled-components';
+import svgDraw from 'root/theme/keyframes/svg-draw';
 
 import Paper from 'root/components/Paper';
 import SvgIcon from 'root/components/SvgIcon';
-import svgDraw from 'root/theme/keyframes/svg-draw';
 
 export const Wrap = styled('div')`
   align-items: center;
@@ -45,5 +45,5 @@ export const Ornament = styled(SvgIcon)`
     animation: ${svgDraw(-19900, 0.15, '#f50057')} 21s 5s both;
     stroke-dasharray: 31294, 31294;
     stroke: #000;
-  }
+  };
 `;

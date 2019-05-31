@@ -3,12 +3,11 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {showPage} from 'root/redux-core/actions/page';
 
-import {Wrap, Title} from './style';
+import {Icon, Title, Wrap} from './style';
 
 let isClick = false;
 
 function Side({
-                children,
                 label,
                 page,
                 showPage,
@@ -30,14 +29,22 @@ function Side({
 
   return (
       <Wrap
-          style={{ outline: 'none'}}
           data-page={label}
           onMouseDown={handleMouseDown}
           onMouseUp={handleMouseUp}
           onTouchStart={handleMouseDown}
       >
         <Title>{label}</Title>
-        {children}
+        {page.active
+            ? <Icon
+                color='var(--secondary-color)'
+                id='icon-Close'
+            />
+            : <Icon
+                color='var(--background-invert-color)'
+                id={`icon-${label}`}
+            />
+        }
       </Wrap>
   );
 }

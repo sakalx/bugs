@@ -3,23 +3,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import Side from './Side';
 
-import {Cube, Icon} from './style';
-import showIn from 'root/theme/keyframes/show-in';
+import {Cube} from './style';
 
-const sides = [
-  // Front
-  'About',
-  // Back
-  'Contact',
-  // Right
-  'Education',
-  // Left
-  'Experience',
-  // Top
-  'Skills',
-  // Bottom
-  'Accomplishments',
-];
 
 function CubeComponent({page}) {
 
@@ -29,14 +14,18 @@ function CubeComponent({page}) {
           out={page.active}
           viewportSize='65vmin'
       >
-        {sides.map((label) =>
-            <Side key={label} label={label}>
-              {page.active
-                  ? <Icon color='var(--secondary-color)' id='icon-Close'/>
-                  : <Icon color='var(--background-invert-color)' id={`icon-${label}`}/>
-              }
-            </Side>,
-        )}
+        {/*Front*/}
+        <Side label='About'/>
+        {/*Back*/}
+        <Side label='Contact'/>
+        {/*Right*/}
+        <Side label='Education'/>
+        {/*Left*/}
+        <Side label='Experience'/>
+        {/*Top*/}
+        <Side label='Skills'/>
+        {/*Bottom*/}
+        <Side label='Accomplishments'/>
       </Cube>
 
   );

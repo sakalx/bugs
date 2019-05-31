@@ -12,12 +12,12 @@ import {Wrap} from './style';
 function App() {
   return (
       <Wrap role='main'>
-        <Navigation/>
+        <Borders/>
         <Cube/>
+        <Navigation/>
         <Particles/>
         <Ornament/>
         <Overlays/>
-        <Borders/>
       </Wrap>
   );
 }

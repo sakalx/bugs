@@ -48,5 +48,5 @@ export const Ornament = styled(SvgIcon)`
     animation: ${svgDraw(-2650, 0.1, '#f50057')} 21s 5s both;
     stroke-dasharray: 3000, 3000;
     stroke: #000;
-  }
+  };
 `;

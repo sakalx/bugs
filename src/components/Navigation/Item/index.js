@@ -39,10 +39,7 @@ const Item = ({title, showPage}) => {
   };
 
   return (
-      <Wrap
-          onMouseEnter={handleHover}
-          onClick={handleShowPage}
-      >
+      <Wrap onMouseEnter={handleHover} onClick={handleShowPage}>
         <SvgIcon color='var(--secondary-color)' id={`icon-${title}`}/>
         <span>{title}</span>
       </Wrap>

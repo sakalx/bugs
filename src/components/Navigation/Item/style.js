@@ -11,7 +11,7 @@ export const Wrap = styled('li')`
   
   span {
     transition: transform .5s cubic-bezier(.5,-.75,.7,2);
-  }
+  };
   
   svg {
     height: 8vmin;
@@ -19,13 +19,13 @@ export const Wrap = styled('li')`
     transform: scale(0);
     transition: transform .5s;
     width: 8vmin;
-  }
+  };
   
   :hover span {
     transform: translateX(35vw) scale(0);
-  }
+  };
   
   :hover svg {
     transform: scale(1);
-  }
+  };
 `;

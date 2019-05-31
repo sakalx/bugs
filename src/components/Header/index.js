@@ -2,12 +2,7 @@ import React from 'react';
 
 import {connect} from 'react-redux';
 
-import {
-  Icon,
-  Ornament,
-  Title,
-  Wrap,
-} from './style';
+import {Icon, Ornament, Title, Wrap} from './style';
 
 function Header({title, page}) {
   return (

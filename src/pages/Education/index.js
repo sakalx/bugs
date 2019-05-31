@@ -18,13 +18,13 @@ function EducationPage() {
               <Icon color='#02b3e4' id='icon-Udacity'/>
               <Content>
                 <h2>React Developer.</h2>
-                <TimeRange
-                    start={{dateTime: '2017-11-01', title: 'November 2017'}}
-                    end={{dateTime: '2018-01-01', title: 'January 2018'}}
-                />
                 <Link
                     href='https://www.udacity.com/course/react-nanodegree--nd019'
                     title='Udacity.'
+                />
+                <TimeRange
+                    start={{dateTime: '2017-11-01', title: 'November 2017'}}
+                    end={{dateTime: '2018-01-01', title: 'January 2018'}}
                 />
                 <aside data-tooltip='CERTIFICATE'>
                   <Link
@@ -40,13 +40,13 @@ function EducationPage() {
               <Icon color='#fd9460' id='icon-JSinfo'/>
               <Content>
                 <h2>JavaScript Soft Developer.</h2>
-                <TimeRange
-                    start={{dateTime: '2017-10-01', title: 'October 2017'}}
-                    end={{dateTime: '2017-12-01', title: 'December 2017'}}
-                />
                 <Link
                     href='http://javascript.info'
                     title='JavaScript.info – Intensive Course.'
+                />
+                <TimeRange
+                    start={{dateTime: '2017-10-01', title: 'October 2017'}}
+                    end={{dateTime: '2017-12-01', title: 'December 2017'}}
                 />
                 <aside data-tooltip='CERTIFICATE'>
                   <Link
@@ -62,13 +62,13 @@ function EducationPage() {
               <Icon color='#50667b' id='icon-GB'/>
               <Content>
                 <h2>Professional Web Developer.</h2>
-                <TimeRange
-                    start={{dateTime: '2016-12-01', title: 'December 2016'}}
-                    end={{dateTime: '2017-09-01', title: 'September 2017'}}
-                />
                 <Link
                     href='https://geekbrains.ru/professions/web_developer'
                     title='GeekBrains – Online University.'
+                />
+                <TimeRange
+                    start={{dateTime: '2016-12-01', title: 'December 2016'}}
+                    end={{dateTime: '2017-09-01', title: 'September 2017'}}
                 />
                 <aside data-tooltip='CERTIFICATE'>
                   <Link
@@ -99,13 +99,13 @@ function EducationPage() {
               <Icon color='#31338B' id='icon-LPNU'/>
               <Content>
                 <h2>Bachelor’s Degree of Computer Engineering.</h2>
-                <TimeRange
-                    start={{dateTime: '2006-09-01', title: 'September 2006'}}
-                    end={{dateTime: '2008-06-01', title: 'June 2008'}}
-                />
                 <Link
                     href='http://www.lp.edu.ua/en'
                     title='Lviv Polytechnic National University.'
+                />
+                <TimeRange
+                    start={{dateTime: '2006-09-01', title: 'September 2006'}}
+                    end={{dateTime: '2008-06-01', title: 'June 2008'}}
                 />
               </Content>
             </Card>

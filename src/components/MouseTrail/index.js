@@ -8,8 +8,8 @@ function MouseTrail() {
     const canvas = canvasEl.current;
 
     (async () => {
-      const module = await import('root/utils/mouse-trail');
-      module.default(viewport, canvas);
+      const mouseTrailModule = await import('root/utils/mouse-trail');
+      mouseTrailModule.default(viewport, canvas);
     })();
   }, []);
 

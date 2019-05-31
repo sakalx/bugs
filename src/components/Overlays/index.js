@@ -1,4 +1,5 @@
 import React, {useEffect, useRef} from 'react';
+
 import {connect} from 'react-redux';
 
 import setDocTitle from 'root/utils/doc-title';
@@ -14,6 +15,19 @@ import MouseTrail from 'root/components/MouseTrail';
 
 import {WrapContent} from './style';
 
+const renderContent = (page) => {
+  const pages = {
+    'About': <AboutPage/>,
+    'Contact': <ContactPage/>,
+    'Education': <EducationPage/>,
+    'Experience': <ExperiencePage/>,
+    'Skills': <SkillsPage/>,
+    'Accomplishments': <AccomplishmentsPage/>,
+  };
+
+  return pages[page.active] || pages[page.cache];
+};
+
 function Overlays({page}) {
   const contentEl = useRef(null);
 
@@ -21,19 +35,6 @@ function Overlays({page}) {
     setDocTitle(page.active);
     !page.active && (contentEl.current.scrollTop = 0);
   }, [page.active]);
-
-  const renderContent = () => {
-    const pages = {
-      'About': <AboutPage/>,
-      'Contact': <ContactPage/>,
-      'Education': <EducationPage/>,
-      'Experience': <ExperiencePage/>,
-      'Skills': <SkillsPage/>,
-      'Accomplishments': <AccomplishmentsPage/>,
-    };
-
-    return pages[page.active] || pages[page.cache];
-  };
 
   return (
       <OverlayEffect
@@ -45,8 +46,9 @@ function Overlays({page}) {
           style={{position: 'relative'}}
       >
         <WrapContent ref={contentEl}>
-          {renderContent()}
+          {renderContent(page)}
         </WrapContent>
+
         <MouseTrail/>
       </OverlayEffect>
   );
@@ -56,4 +58,4 @@ const mapStateToProps = ({page}) => ({
   page,
 });
 
-export default connect(mapStateToProps, null)(React.memo(Overlays));
+export default connect(mapStateToProps, null)(Overlays);

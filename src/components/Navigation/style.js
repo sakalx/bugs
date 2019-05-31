@@ -22,6 +22,6 @@ export const Nav = styled('ul')`
         
     li::after, li::before {
       content: none;
-    }
-  }
+    };
+  };
 `;

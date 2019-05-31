@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {TopRight, BottomRight, BottomLeft} from './style';
+import {BottomLeft, BottomRight, TopRight} from './style';
 
 function Ornament() {
   return (
