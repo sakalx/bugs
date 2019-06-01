@@ -1,7 +1,7 @@
 {
-  "name": "bugs",
+  "name": "sakals",
   "version": "1.0.0",
-  "description": "Bugs portfolio",
+  "description": "Portfolio, Sakal",
   "main": "index.js",
   "babel": {
     "presets": [
@@ -29,10 +29,13 @@
     "start": "webpack-dev-server",
     "build": "webpack --mode=production",
     "build-svg": "gulp svg-clean && gulp svg-min && gulp svg-sprite-main && gulp svg-sprite-rest",
-    "deploy": "npm run build && gh-pages -d build && firebase deploy"
+    "deploy-Git": "gh-pages -d build && firebase deploy",
+    "deploy-Firebase": "firebase deploy"
   },
   "keywords": [
-    "bugs"
+    "sakal",
+    "sakals",
+    "sakalx"
   ],
   "author": "Sakal Serhii <sakals@mail.ua>",
   "license": "MIT",

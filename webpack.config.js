@@ -8,7 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // Folders:
 const development = 'src';
-const production = 'build';
+const production = 'public';
 
 const SRC_DIR = path.join(__dirname, development);
 const DIST_DIR = path.join(__dirname, production);
