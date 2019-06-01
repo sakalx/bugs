@@ -49,7 +49,7 @@ function Overlays({page}) {
           {renderContent(page)}
         </WrapContent>
 
-        <MouseTrail/>
+        {!isMobile && <MouseTrail/>}
       </OverlayEffect>
   );
 }

@@ -9,7 +9,7 @@ const cssBaseline = css`
   height: 90vmin;
   position: absolute;
   width: 90vmin;
-  z-index: 1000;
+  z-index: 3000;
 `;
 
 export const TopLeft = styled(SvgIcon)`

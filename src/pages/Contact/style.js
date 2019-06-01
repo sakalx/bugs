@@ -41,7 +41,7 @@ export const Ornament = styled(SvgIcon)`
   z-index: 2;
     
   use {
-    animation: ${svgDraw(-2620, 0.15, '#f50057')} 21s 5s both;
+    animation: ${svgDraw(-2620, 0.1, '#f50057')} 21s 5s both;
     stroke-dasharray: 2620, 2620;
     stroke: #000;
   };

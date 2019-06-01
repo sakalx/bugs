@@ -29,7 +29,7 @@
     "start": "webpack-dev-server",
     "build": "webpack --mode=production",
     "build-svg": "gulp svg-clean && gulp svg-min && gulp svg-sprite-main && gulp svg-sprite-rest",
-    "deploy": "npm run build && gh-pages -d build"
+    "deploy": "npm run build && gh-pages -d build && firebase deploy"
   },
   "keywords": [
     "bugs"

@@ -7,8 +7,8 @@ const logger = createLogger({
   collapsed: false,
 });
 
-const middleware = applyMiddleware(logger);
+//const middleware = applyMiddleware(logger);
 
-const store = createStore(rootReducer, middleware);
+const store = createStore(rootReducer); //middleware
 
 export default store;
