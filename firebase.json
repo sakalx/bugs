@@ -21,6 +21,15 @@
             "value": "max-age=31557600"
           }
         ]
+      },
+      {
+        "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31557600"
+          }
+        ]
       }
     ]
   }

@@ -5,6 +5,7 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const FaviconWebpackPlugin = require('favicons-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
 
 // Folders:
 const development = 'src';
@@ -47,13 +48,6 @@ module.exports = (env, argv = {}) => {
   ];
   const imgConfig = isProd ? imgProd : imgDev;
 
-  const svgConfig = {
-    loader: 'svg-sprite-loader',
-    options: {
-      symbolId: 'icon-[name]',
-    },
-  };
-
 //============================================================
   // Plugins:
   const progressPlugin = new webpack.ProgressPlugin();
@@ -73,17 +67,50 @@ module.exports = (env, argv = {}) => {
     inject: true,
     background: '#000',
     icons: {
-      android: false,
-      appleIcon: false,
+      android: true,
+      appleIcon: true,
       appleStartup: false,
       coast: false,
       favicons: true,
       firefox: true,
-      opengraph: false,
+      opengraph: true,
       twitter: false,
       yandex: false,
       windows: true,
     },
+  });
+
+  const pwaManifest = new WebpackPwaManifest({
+    name: 'Serhii Sakal',
+    short_name: 'Sakal',
+    description: 'Personal page, Serhii Sakal.',
+    background_color: '#000',
+    theme_color: '#000',
+    start_url: '/',
+    icons: [
+      {
+        src: path.resolve(`./${development}/static/favicon/logo.png`),
+        sizes: [120, 152, 167, 180, 1024],
+        destination: path.join('icons', 'ios'),
+        ios: true,
+      },
+      {
+        src: path.resolve(`./${development}/static/favicon/logo.png`),
+        size: 1024,
+        destination: path.join('icons', 'ios'),
+        ios: 'startup',
+      },
+      {
+        src: path.resolve(`./${development}/static/favicon/logo.png`),
+        sizes: [36, 48, 72, 96, 144, 192, 512],
+        destination: path.join('icons', 'android'),
+      },
+      {
+        src: path.resolve(`./${development}/static/favicon/logo.png`),
+        sizes: [96, 128, 192, 256, 384, 512],
+        destination: path.join('icons'),
+      },
+    ],
   });
 
 //============================================================
@@ -159,6 +186,7 @@ module.exports = (env, argv = {}) => {
           cleanProdFolder,
           favicon,
           htmlIndex,
+          pwaManifest,
         ]
         : [
           progressPlugin,
