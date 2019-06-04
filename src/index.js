@@ -32,3 +32,12 @@ console.time('Injecting FONTS');
 injectFont('PT+Sans');
 injectFont('Akronim');
 console.timeEnd('Injecting FONTS');
+
+
+(() => {
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/service-worker.js');
+    });
+  }
+})();

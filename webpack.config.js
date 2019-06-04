@@ -6,6 +6,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const FaviconWebpackPlugin = require('favicons-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
+const {GenerateSW} = require('workbox-webpack-plugin');
 
 // Folders:
 const development = 'src';
@@ -105,11 +106,6 @@ module.exports = (env, argv = {}) => {
         sizes: [36, 48, 72, 96, 144, 192, 512],
         destination: path.join('icons', 'android'),
       },
-      {
-        src: path.resolve(`./${development}/static/favicon/logo.png`),
-        sizes: [96, 128, 192, 256, 384, 512],
-        destination: path.join('icons'),
-      },
     ],
   });
 
@@ -187,6 +183,7 @@ module.exports = (env, argv = {}) => {
           favicon,
           htmlIndex,
           pwaManifest,
+          new GenerateSW(),
         ]
         : [
           progressPlugin,
