@@ -1,36 +1,6 @@
 {
   "icons": [
     {
-      "src": "icons/icon_512x512.c9eb193fe937dbe80bc3e5175c0cfadf.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    },
-    {
-      "src": "icons/icon_384x384.a4d814abf0d600cd1301453dcb1bd39c.png",
-      "sizes": "384x384",
-      "type": "image/png"
-    },
-    {
-      "src": "icons/icon_256x256.dcb25979446e6ebc6d7b4561dddac7c2.png",
-      "sizes": "256x256",
-      "type": "image/png"
-    },
-    {
-      "src": "icons/icon_192x192.b2fb8212a3e693c40b53fc304fb359bd.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "icons/icon_128x128.b53cdb0bb7ce169e84d53cdc29b29571.png",
-      "sizes": "128x128",
-      "type": "image/png"
-    },
-    {
-      "src": "icons/icon_96x96.2fab366bc9bb82b86253fd0fb2bcdea3.png",
-      "sizes": "96x96",
-      "type": "image/png"
-    },
-    {
       "src": "icons/android/icon_512x512.c9eb193fe937dbe80bc3e5175c0cfadf.png",
       "sizes": "512x512",
       "type": "image/png"
